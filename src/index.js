@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { ReactQueryDevtools } from 'react-query-devtools';
+//import { ReactQueryDevtools } from 'react-query-devtools';
 import './index.css';
 import './assets/main.css';
 
