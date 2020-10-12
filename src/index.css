@@ -1,1 +1,68 @@
 @import '~antd/dist/antd.css';
+
+:root {
+  --primary: #282f44;
+  --background: #ececec;
+  --accent: #e6af2e;
+  --accent-light: #f5d061;
+  box-sizing: border-box;
+}
+
+header {
+  z-index: 100;
+}
+
+.text-thunder:hover {
+  color: var(--accent);
+}
+
+.primary {
+  background-color: var(--primary);
+}
+
+.secundary-btn {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.secundary-btn:active {
+  background-color: var(--accent);
+  color: var(--primary);
+  border: none;
+}
+
+.secundary-btn:hover,
+.secundary-btn:focus {
+  background-color: var(--accent);
+  color: var(--primary);
+  border: none;
+}
+
+.secundary-btn:hover {
+  background-color: var(--accent-light);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.form {
+  width: 300px;
+}
+
+.ant-input-affix-wrapper:hover {
+  border-color: var(--accent-light);
+}
+
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px #e6af2e23;
+}
+
+.anticon {
+  vertical-align: 0;
+}
+
+thead > tr > th {
+  color: var(--primary) !important;
+  font-weight: bolder !important;
+}
