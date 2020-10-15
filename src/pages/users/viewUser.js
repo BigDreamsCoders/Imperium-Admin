@@ -13,8 +13,6 @@ export const ViewUser = () => {
     return getOneUser(params.id);
   });
 
-  console.log(data);
-
   return (
     <>
       <div className='relative min-h-full w-full flex flex-col justify-center items-center'>

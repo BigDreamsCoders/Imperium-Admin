@@ -82,9 +82,7 @@ export const NewUser = () => {
     try {
       await form.validateFields(fields[current]);
       setCurrent(current + 1);
-    } catch (e) {
-      console.log(e);
-    }
+    } catch (e) {}
   };
   const prev = () => {
     setCurrent(current - 1);
@@ -94,9 +92,7 @@ export const NewUser = () => {
     try {
       await form.validateFields(fields[current]);
       setCurrent(value);
-    } catch (e) {
-      console.log(e);
-    }
+    } catch (e) {}
   };
 
   return (
