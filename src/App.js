@@ -9,6 +9,9 @@ import { UserIdex } from './pages/users';
 import { AnimatePresence } from 'framer-motion';
 import { me } from './services/api';
 import { NewUser } from './pages/users/newUser';
+import { ChangePass } from './pages/changePass';
+import { ViewUser } from './pages/users/viewUser';
+import { EditUser } from './pages/users/editUser';
 
 const { Header, Content } = Layout;
 
@@ -56,11 +59,20 @@ export const App = () => {
           <RouteTransition exact path='/login' slideUp={15}>
             <Login />
           </RouteTransition>
+          <RouteTransition exact path='/reset-psw' slideUp={15}>
+            <ChangePass />
+          </RouteTransition>
           <RouteTransition exact path='/users' slideUp={15}>
             <UserIdex />
           </RouteTransition>
           <RouteTransition exact path='/users/new' slideUp={15}>
             <NewUser />
+          </RouteTransition>
+          <RouteTransition exact path='/users/edit/:id' slideUp={15}>
+            <EditUser />
+          </RouteTransition>
+          <RouteTransition exact path='/users/:id' slideUp={15}>
+            <ViewUser />
           </RouteTransition>
           <RouteTransition path='/' slideUp={15}>
             <Index />

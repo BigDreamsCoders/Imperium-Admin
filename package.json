@@ -4,11 +4,15 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
+    "@craco/craco": "^5.7.0",
     "antd": "^4.6.5",
     "axios": "^0.19.2",
+    "craco-less": "^1.17.0",
     "framer-motion": "^2.8.0",
+    "moment": "^2.29.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
     "react-query": "^2.22.0",
     "react-query-devtools": "^2.4.7",
@@ -16,9 +20,9 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "npm run watch:css && react-scripts start",
-    "build": "npm run build:css && react-scripts build",
-    "test": "react-scripts test",
+    "start": "npm run watch:css && craco start",
+    "build": "npm run build:css && craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/tailwind/tailwind.css -o src/assets/tailwind/main.css",
     "watch:css": "postcss src/assets/tailwind/tailwind.css -o src/assets/tailwind/main.css"

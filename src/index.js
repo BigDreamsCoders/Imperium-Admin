@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { App } from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ReactQueryDevtools } from 'react-query-devtools';
-import './index.css';
+import './index.less';
 import './assets/tailwind/main.css';
 
 const AppWithRouter = () => {
@@ -12,7 +12,7 @@ const AppWithRouter = () => {
       <Router basename={process.env.PUBLIC_URL}>
         <App />
       </Router>
-      <ReactQueryDevtools />
+      {process.env.NODE_ENV !== 'production' && <ReactQueryDevtools />}
     </>
   );
 };

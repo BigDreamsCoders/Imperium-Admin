@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+@import '~antd/dist/antd.less';
 
 :root {
   --primary: #282f44;
@@ -18,6 +18,10 @@ header {
 
 .primary {
   background-color: var(--primary);
+}
+
+.secundary {
+  background-color: var(--accent);
 }
 
 .secundary-btn {
@@ -65,4 +69,8 @@ header {
 thead > tr > th {
   color: var(--primary) !important;
   font-weight: bolder !important;
+}
+
+.ant-steps-horizontal:not(.ant-steps-label-vertical) .ant-steps-item {
+  padding-left: 0 !important;
 }

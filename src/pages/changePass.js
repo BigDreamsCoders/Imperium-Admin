@@ -1,31 +1,27 @@
 import React, { useState } from 'react';
-import Icon, { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Form, Input, notification } from 'antd';
-import { useHistory } from 'react-router-dom';
+import Icon, { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { FormInput } from '../components/formInput';
-import { login } from '../services/api';
+import { updatePassword } from '../services/api';
+import { useHistory } from 'react-router-dom';
 
 const { Item } = Form;
 
-export const Login = () => {
-  const [loading, setLoading] = useState();
+export const ChangePass = () => {
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
 
   const onFinish = async (values) => {
+    setLoading(true);
     try {
-      setLoading(true);
-      await login(values);
-      history.replace({ pathname: '/' });
+      await updatePassword(values);
+      history.push('/');
     } catch (e) {
-      setLoading(false);
       let message = '';
+      setLoading(false);
       switch (e.response.data.statusCode) {
-        case 401: {
-          message = 'Credenciales erroneas';
-          break;
-        }
-        case 403: {
-          message = 'No dispones de permisos para entrar al administrador';
+        case 400: {
+          message = 'Verifica tu contraseña';
           break;
         }
         default: {
@@ -38,38 +34,38 @@ export const Login = () => {
   };
 
   return (
-    <div className='w-full h-full flex justify-center items-center'>
+    <div className='w-full h-full flex md:justify-center items-center'>
       <div className=' p-10 bg-white rounded shadow-md'>
         <Form name='login' className='form' onFinish={onFinish}>
-          <FormInput id='email' label='Email'>
-            <Item
-              name='email'
-              rules={[
-                {
-                  required: true,
-                  message: 'Debes ingresar tu correo!',
-                },
-              ]}>
-              <Input
-                type='email'
-                id='email'
-                className='shadow'
-                prefix={<Icon component={UserOutlined} />}
-              />
-            </Item>
-          </FormInput>
-          <FormInput id='password' label='Password'>
+          <FormInput id='password' label='Contraseña actual'>
             <Item
               name='password'
               rules={[
                 {
                   required: true,
-                  message: 'Debes ingresar tu contraseña!',
+                  message: 'Debes ingresar tu password actual!',
                 },
               ]}>
               <Input
                 type='password'
                 id='password'
+                className='shadow'
+                prefix={<Icon component={UserOutlined} />}
+              />
+            </Item>
+          </FormInput>
+          <FormInput id='newPassword' label='Nueva contraseña'>
+            <Item
+              name='newPassword'
+              rules={[
+                {
+                  required: true,
+                  message: 'Debes ingresar la nueva contraseña',
+                },
+              ]}>
+              <Input
+                type='password'
+                id='new-password'
                 className='shadow'
                 prefix={<Icon component={LockOutlined} />}
               />
@@ -82,7 +78,7 @@ export const Login = () => {
                 htmlType='submit'
                 loading={loading}
                 disabled={loading}>
-                Log in
+                Cambiar contraseña
               </Button>
             </Item>
           </div>

@@ -9,6 +9,9 @@ import { logout } from '../services/localstorage';
 const AdminNavMenu = () => {
   return (
     <Menu>
+      <Menu.Item>
+        <Link to='/reset-psw'>Editar contraseña</Link>
+      </Menu.Item>
       <Menu.Item danger onClick={logout}>
         <Link to='/login'>Logout</Link>
       </Menu.Item>

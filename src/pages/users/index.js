@@ -1,33 +1,73 @@
 import React, { useState, useCallback } from 'react';
-import { Button, Spin, Table } from 'antd';
+import { Button, Modal, notification, Spin, Table } from 'antd';
 import { usePaginatedQuery } from 'react-query';
 import Icon, { LoadingOutlined } from '@ant-design/icons';
 import { GrAdd } from 'react-icons/gr';
-import { getUsers } from '../../services/api';
+import { deleteUser, getUsers } from '../../services/api';
 import { columns } from './tableColumns';
 import { useHistory } from 'react-router-dom';
 
 export const UserIdex = () => {
   const [page, setPage] = useState(0);
   const [limit, setLimit] = useState(10);
+  const [userToDelete, setUserToDelete] = useState({});
+  const [showModal, setShowModal] = useState(false);
+  const [showLoadingModal, setShowLoadingModal] = useState(false);
   const history = useHistory();
   const fetchUsers = useCallback(() => getUsers(page, limit), [page, limit]);
 
-  const { resolvedData, isFetching } = usePaginatedQuery(
+  const { resolvedData, isFetching, refetch } = usePaginatedQuery(
     ['fetchUsers', page, limit],
     fetchUsers
   );
+
+  const onShowModal = (user) => {
+    console.log(user);
+    setUserToDelete(user);
+    setShowModal(true);
+  };
+
+  const onDelete = async () => {
+    setShowLoadingModal(true);
+    try {
+      await deleteUser(userToDelete.id);
+      refetch();
+    } catch (e) {
+      notification.error({ message: 'Algo ocurrio' });
+    } finally {
+      setUserToDelete({});
+      setShowModal(false);
+    }
+  };
+
+  const onCancel = () => {
+    setUserToDelete({});
+    setShowModal(false);
+  };
+
   return (
-    <div className='relative min-h-full w-full flex justify-center items-center self-stretch'>
+    <div className='relative min-h-full w-full flex flex-col justify-center items-center self-stretch'>
       {isFetching && (
         <div className='absolute right-0 top-0 mr-1 mt-1'>
           <Spin indicator={() => <LoadingOutlined spin />} />
         </div>
       )}
+      <h1 style={{ fontSize: '48px' }} className='justify-self-start mb-3'>
+        Usuarios
+      </h1>
+      <Modal
+        visible={showModal}
+        onOk={onDelete}
+        onCancel={onCancel}
+        okText='Sí'
+        cancelText='Cancelar'
+        confirmLoading={showLoadingModal}>
+        <p>¿Desea a eliminar a {userToDelete?.name}?</p>
+      </Modal>
       <Table
-        className='px-10'
+        className='px-5'
         loading={isFetching}
-        columns={columns}
+        columns={columns(onShowModal)}
         scroll={{ x: 1300 }}
         dataSource={resolvedData?.data}
         bordered
@@ -47,7 +87,7 @@ export const UserIdex = () => {
         }}
       />
       <Button
-        className='absolute bottom-0 right-0 mr-10 mb-10 secundary-btn'
+        className='fixed flex justify-center items-center bottom-0 right-0 mr-2 mb-2 secundary-btn'
         shape='circle'
         size='large'
         icon={<Icon component={GrAdd} />}
