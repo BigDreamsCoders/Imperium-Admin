@@ -34,7 +34,7 @@ export const ChangePass = () => {
   };
 
   return (
-    <div className='w-full h-full flex md:justify-center items-center'>
+    <div className='w-full h-full flex justify-center items-center'>
       <div className=' p-10 bg-white rounded shadow-md'>
         <Form name='login' className='form' onFinish={onFinish}>
           <FormInput id='password' label='Contraseña actual'>

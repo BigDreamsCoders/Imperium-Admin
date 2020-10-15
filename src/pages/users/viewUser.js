@@ -28,7 +28,7 @@ export const ViewUser = () => {
             <h1 className='font-bold text-center' style={{ fontSize: '24px' }}>
               Información de usuario
             </h1>
-            <div className='flex sm:flex-col md:flex-row justify-between flex-grow my-3'>
+            <div className='flex flex-col sm:flex-row justify-between flex-grow my-3'>
               <div className='mx-5 sm:my-3 '>
                 <div>
                   <h2 className='font-bold text-center'>Info. Basica</h2>
