@@ -3,25 +3,34 @@ import { useLocation } from 'react-router-dom';
 
 export const ErrorPage = () => {
   const location = useLocation();
+
   if (location?.state) {
     const state = location.state;
     if (state?.conn) {
       return (
         <>
-          <h1>You dont have internet my dude</h1>
+          <BigText>You dont have internet my dude</BigText>
         </>
       );
     }
     if (state?.timeout)
       return (
         <>
-          <h1>The server does not respond</h1>
+          <BigText>The server does not respond</BigText>
         </>
       );
   }
   return (
     <>
-      <h1>404</h1>
+      <BigText>404</BigText>
     </>
   );
 };
+
+const BigText = ({ children }) => (
+  <div className='h-full w-full flex flex-col justify-center items-center'>
+    <h1 style={{ fontSize: 48 }} className='text-primary'>
+      {children}
+    </h1>
+  </div>
+);

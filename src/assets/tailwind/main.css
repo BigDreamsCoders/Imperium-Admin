@@ -1,3 +1,11 @@
+:root {
+  --primary: #282f44;
+  --background: #ececec;
+  --accent: #e6af2e;
+  --accent-light: #f5d061;
+  box-sizing: border-box;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -1133,6 +1141,10 @@ video {
   border-color: currentColor;
 }
 
+.divide-primary > :not(template) ~ :not(template) {
+  border-color: var(--primary);
+}
+
 .divide-black > :not(template) ~ :not(template) {
   --divide-opacity: 1;
   border-color: #000;
@@ -1813,6 +1825,10 @@ video {
   background-color: currentColor;
 }
 
+.bg-primary {
+  background-color: var(--primary);
+}
+
 .bg-black {
   --bg-opacity: 1;
   background-color: #000;
@@ -2373,6 +2389,10 @@ video {
   background-color: currentColor;
 }
 
+.hover\:bg-primary:hover {
+  background-color: var(--primary);
+}
+
 .hover\:bg-black:hover {
   --bg-opacity: 1;
   background-color: #000;
@@ -2931,6 +2951,10 @@ video {
 
 .focus\:bg-current:focus {
   background-color: currentColor;
+}
+
+.focus\:bg-primary:focus {
+  background-color: var(--primary);
 }
 
 .focus\:bg-black:focus {
@@ -3531,6 +3555,11 @@ video {
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
+.from-primary {
+  --gradient-from-color: var(--primary);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
 .from-black {
   --gradient-from-color: #000;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -3998,6 +4027,11 @@ video {
 
 .via-current {
   --gradient-via-color: currentColor;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.via-primary {
+  --gradient-via-color: var(--primary);
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
@@ -4469,6 +4503,10 @@ video {
   --gradient-to-color: currentColor;
 }
 
+.to-primary {
+  --gradient-to-color: var(--primary);
+}
+
 .to-black {
   --gradient-to-color: #000;
 }
@@ -4844,6 +4882,11 @@ video {
 
 .hover\:from-current:hover {
   --gradient-from-color: currentColor;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.hover\:from-primary:hover {
+  --gradient-from-color: var(--primary);
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
@@ -5317,6 +5360,11 @@ video {
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
+.hover\:via-primary:hover {
+  --gradient-via-color: var(--primary);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
 .hover\:via-black:hover {
   --gradient-via-color: #000;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -5785,6 +5833,10 @@ video {
   --gradient-to-color: currentColor;
 }
 
+.hover\:to-primary:hover {
+  --gradient-to-color: var(--primary);
+}
+
 .hover\:to-black:hover {
   --gradient-to-color: #000;
 }
@@ -6160,6 +6212,11 @@ video {
 
 .focus\:from-current:focus {
   --gradient-from-color: currentColor;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.focus\:from-primary:focus {
+  --gradient-from-color: var(--primary);
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
@@ -6633,6 +6690,11 @@ video {
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
+.focus\:via-primary:focus {
+  --gradient-via-color: var(--primary);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
 .focus\:via-black:focus {
   --gradient-via-color: #000;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -7099,6 +7161,10 @@ video {
 
 .focus\:to-current:focus {
   --gradient-to-color: currentColor;
+}
+
+.focus\:to-primary:focus {
+  --gradient-to-color: var(--primary);
 }
 
 .focus\:to-black:focus {
@@ -7615,6 +7681,10 @@ video {
 
 .border-current {
   border-color: currentColor;
+}
+
+.border-primary {
+  border-color: var(--primary);
 }
 
 .border-black {
@@ -8177,6 +8247,10 @@ video {
   border-color: currentColor;
 }
 
+.hover\:border-primary:hover {
+  border-color: var(--primary);
+}
+
 .hover\:border-black:hover {
   --border-opacity: 1;
   border-color: #000;
@@ -8735,6 +8809,10 @@ video {
 
 .focus\:border-current:focus {
   border-color: currentColor;
+}
+
+.focus\:border-primary:focus {
+  border-color: var(--primary);
 }
 
 .focus\:border-black:focus {
@@ -12521,6 +12599,10 @@ video {
   color: currentColor;
 }
 
+.placeholder-primary::placeholder {
+  color: var(--primary);
+}
+
 .placeholder-black::placeholder {
   --placeholder-opacity: 1;
   color: #000;
@@ -13079,6 +13161,10 @@ video {
 
 .focus\:placeholder-current:focus::placeholder {
   color: currentColor;
+}
+
+.focus\:placeholder-primary:focus::placeholder {
+  color: var(--primary);
 }
 
 .focus\:placeholder-black:focus::placeholder {
@@ -13955,6 +14041,10 @@ video {
   color: currentColor;
 }
 
+.text-primary {
+  color: var(--primary);
+}
+
 .text-black {
   --text-opacity: 1;
   color: #000;
@@ -14515,6 +14605,10 @@ video {
   color: currentColor;
 }
 
+.hover\:text-primary:hover {
+  color: var(--primary);
+}
+
 .hover\:text-black:hover {
   --text-opacity: 1;
   color: #000;
@@ -15073,6 +15167,10 @@ video {
 
 .focus\:text-current:focus {
   color: currentColor;
+}
+
+.focus\:text-primary:focus {
+  color: var(--primary);
 }
 
 .focus\:text-black:focus {
@@ -19167,6 +19265,10 @@ video {
     border-color: currentColor;
   }
 
+  .sm\:divide-primary > :not(template) ~ :not(template) {
+    border-color: var(--primary);
+  }
+
   .sm\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -19847,6 +19949,10 @@ video {
     background-color: currentColor;
   }
 
+  .sm\:bg-primary {
+    background-color: var(--primary);
+  }
+
   .sm\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -20407,6 +20513,10 @@ video {
     background-color: currentColor;
   }
 
+  .sm\:hover\:bg-primary:hover {
+    background-color: var(--primary);
+  }
+
   .sm\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -20965,6 +21075,10 @@ video {
 
   .sm\:focus\:bg-current:focus {
     background-color: currentColor;
+  }
+
+  .sm\:focus\:bg-primary:focus {
+    background-color: var(--primary);
   }
 
   .sm\:focus\:bg-black:focus {
@@ -21565,6 +21679,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .sm\:from-primary {
+    --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .sm\:from-black {
     --gradient-from-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -22032,6 +22151,11 @@ video {
 
   .sm\:via-current {
     --gradient-via-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .sm\:via-primary {
+    --gradient-via-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -22503,6 +22627,10 @@ video {
     --gradient-to-color: currentColor;
   }
 
+  .sm\:to-primary {
+    --gradient-to-color: var(--primary);
+  }
+
   .sm\:to-black {
     --gradient-to-color: #000;
   }
@@ -22878,6 +23006,11 @@ video {
 
   .sm\:hover\:from-current:hover {
     --gradient-from-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .sm\:hover\:from-primary:hover {
+    --gradient-from-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -23351,6 +23484,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .sm\:hover\:via-primary:hover {
+    --gradient-via-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .sm\:hover\:via-black:hover {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -23819,6 +23957,10 @@ video {
     --gradient-to-color: currentColor;
   }
 
+  .sm\:hover\:to-primary:hover {
+    --gradient-to-color: var(--primary);
+  }
+
   .sm\:hover\:to-black:hover {
     --gradient-to-color: #000;
   }
@@ -24194,6 +24336,11 @@ video {
 
   .sm\:focus\:from-current:focus {
     --gradient-from-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .sm\:focus\:from-primary:focus {
+    --gradient-from-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -24667,6 +24814,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .sm\:focus\:via-primary:focus {
+    --gradient-via-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .sm\:focus\:via-black:focus {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -25133,6 +25285,10 @@ video {
 
   .sm\:focus\:to-current:focus {
     --gradient-to-color: currentColor;
+  }
+
+  .sm\:focus\:to-primary:focus {
+    --gradient-to-color: var(--primary);
   }
 
   .sm\:focus\:to-black:focus {
@@ -25649,6 +25805,10 @@ video {
 
   .sm\:border-current {
     border-color: currentColor;
+  }
+
+  .sm\:border-primary {
+    border-color: var(--primary);
   }
 
   .sm\:border-black {
@@ -26211,6 +26371,10 @@ video {
     border-color: currentColor;
   }
 
+  .sm\:hover\:border-primary:hover {
+    border-color: var(--primary);
+  }
+
   .sm\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -26769,6 +26933,10 @@ video {
 
   .sm\:focus\:border-current:focus {
     border-color: currentColor;
+  }
+
+  .sm\:focus\:border-primary:focus {
+    border-color: var(--primary);
   }
 
   .sm\:focus\:border-black:focus {
@@ -30555,6 +30723,10 @@ video {
     color: currentColor;
   }
 
+  .sm\:placeholder-primary::placeholder {
+    color: var(--primary);
+  }
+
   .sm\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -31113,6 +31285,10 @@ video {
 
   .sm\:focus\:placeholder-current:focus::placeholder {
     color: currentColor;
+  }
+
+  .sm\:focus\:placeholder-primary:focus::placeholder {
+    color: var(--primary);
   }
 
   .sm\:focus\:placeholder-black:focus::placeholder {
@@ -31989,6 +32165,10 @@ video {
     color: currentColor;
   }
 
+  .sm\:text-primary {
+    color: var(--primary);
+  }
+
   .sm\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -32549,6 +32729,10 @@ video {
     color: currentColor;
   }
 
+  .sm\:hover\:text-primary:hover {
+    color: var(--primary);
+  }
+
   .sm\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -33107,6 +33291,10 @@ video {
 
   .sm\:focus\:text-current:focus {
     color: currentColor;
+  }
+
+  .sm\:focus\:text-primary:focus {
+    color: var(--primary);
   }
 
   .sm\:focus\:text-black:focus {
@@ -37171,6 +37359,10 @@ video {
     border-color: currentColor;
   }
 
+  .md\:divide-primary > :not(template) ~ :not(template) {
+    border-color: var(--primary);
+  }
+
   .md\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -37851,6 +38043,10 @@ video {
     background-color: currentColor;
   }
 
+  .md\:bg-primary {
+    background-color: var(--primary);
+  }
+
   .md\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -38411,6 +38607,10 @@ video {
     background-color: currentColor;
   }
 
+  .md\:hover\:bg-primary:hover {
+    background-color: var(--primary);
+  }
+
   .md\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -38969,6 +39169,10 @@ video {
 
   .md\:focus\:bg-current:focus {
     background-color: currentColor;
+  }
+
+  .md\:focus\:bg-primary:focus {
+    background-color: var(--primary);
   }
 
   .md\:focus\:bg-black:focus {
@@ -39569,6 +39773,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .md\:from-primary {
+    --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .md\:from-black {
     --gradient-from-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -40036,6 +40245,11 @@ video {
 
   .md\:via-current {
     --gradient-via-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .md\:via-primary {
+    --gradient-via-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -40507,6 +40721,10 @@ video {
     --gradient-to-color: currentColor;
   }
 
+  .md\:to-primary {
+    --gradient-to-color: var(--primary);
+  }
+
   .md\:to-black {
     --gradient-to-color: #000;
   }
@@ -40882,6 +41100,11 @@ video {
 
   .md\:hover\:from-current:hover {
     --gradient-from-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .md\:hover\:from-primary:hover {
+    --gradient-from-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -41355,6 +41578,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .md\:hover\:via-primary:hover {
+    --gradient-via-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .md\:hover\:via-black:hover {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -41823,6 +42051,10 @@ video {
     --gradient-to-color: currentColor;
   }
 
+  .md\:hover\:to-primary:hover {
+    --gradient-to-color: var(--primary);
+  }
+
   .md\:hover\:to-black:hover {
     --gradient-to-color: #000;
   }
@@ -42198,6 +42430,11 @@ video {
 
   .md\:focus\:from-current:focus {
     --gradient-from-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .md\:focus\:from-primary:focus {
+    --gradient-from-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -42671,6 +42908,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .md\:focus\:via-primary:focus {
+    --gradient-via-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .md\:focus\:via-black:focus {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -43137,6 +43379,10 @@ video {
 
   .md\:focus\:to-current:focus {
     --gradient-to-color: currentColor;
+  }
+
+  .md\:focus\:to-primary:focus {
+    --gradient-to-color: var(--primary);
   }
 
   .md\:focus\:to-black:focus {
@@ -43653,6 +43899,10 @@ video {
 
   .md\:border-current {
     border-color: currentColor;
+  }
+
+  .md\:border-primary {
+    border-color: var(--primary);
   }
 
   .md\:border-black {
@@ -44215,6 +44465,10 @@ video {
     border-color: currentColor;
   }
 
+  .md\:hover\:border-primary:hover {
+    border-color: var(--primary);
+  }
+
   .md\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -44773,6 +45027,10 @@ video {
 
   .md\:focus\:border-current:focus {
     border-color: currentColor;
+  }
+
+  .md\:focus\:border-primary:focus {
+    border-color: var(--primary);
   }
 
   .md\:focus\:border-black:focus {
@@ -48559,6 +48817,10 @@ video {
     color: currentColor;
   }
 
+  .md\:placeholder-primary::placeholder {
+    color: var(--primary);
+  }
+
   .md\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -49117,6 +49379,10 @@ video {
 
   .md\:focus\:placeholder-current:focus::placeholder {
     color: currentColor;
+  }
+
+  .md\:focus\:placeholder-primary:focus::placeholder {
+    color: var(--primary);
   }
 
   .md\:focus\:placeholder-black:focus::placeholder {
@@ -49993,6 +50259,10 @@ video {
     color: currentColor;
   }
 
+  .md\:text-primary {
+    color: var(--primary);
+  }
+
   .md\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -50553,6 +50823,10 @@ video {
     color: currentColor;
   }
 
+  .md\:hover\:text-primary:hover {
+    color: var(--primary);
+  }
+
   .md\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -51111,6 +51385,10 @@ video {
 
   .md\:focus\:text-current:focus {
     color: currentColor;
+  }
+
+  .md\:focus\:text-primary:focus {
+    color: var(--primary);
   }
 
   .md\:focus\:text-black:focus {
@@ -55175,6 +55453,10 @@ video {
     border-color: currentColor;
   }
 
+  .lg\:divide-primary > :not(template) ~ :not(template) {
+    border-color: var(--primary);
+  }
+
   .lg\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -55855,6 +56137,10 @@ video {
     background-color: currentColor;
   }
 
+  .lg\:bg-primary {
+    background-color: var(--primary);
+  }
+
   .lg\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -56415,6 +56701,10 @@ video {
     background-color: currentColor;
   }
 
+  .lg\:hover\:bg-primary:hover {
+    background-color: var(--primary);
+  }
+
   .lg\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -56973,6 +57263,10 @@ video {
 
   .lg\:focus\:bg-current:focus {
     background-color: currentColor;
+  }
+
+  .lg\:focus\:bg-primary:focus {
+    background-color: var(--primary);
   }
 
   .lg\:focus\:bg-black:focus {
@@ -57573,6 +57867,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .lg\:from-primary {
+    --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .lg\:from-black {
     --gradient-from-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -58040,6 +58339,11 @@ video {
 
   .lg\:via-current {
     --gradient-via-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .lg\:via-primary {
+    --gradient-via-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -58511,6 +58815,10 @@ video {
     --gradient-to-color: currentColor;
   }
 
+  .lg\:to-primary {
+    --gradient-to-color: var(--primary);
+  }
+
   .lg\:to-black {
     --gradient-to-color: #000;
   }
@@ -58886,6 +59194,11 @@ video {
 
   .lg\:hover\:from-current:hover {
     --gradient-from-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .lg\:hover\:from-primary:hover {
+    --gradient-from-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -59359,6 +59672,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .lg\:hover\:via-primary:hover {
+    --gradient-via-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .lg\:hover\:via-black:hover {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -59827,6 +60145,10 @@ video {
     --gradient-to-color: currentColor;
   }
 
+  .lg\:hover\:to-primary:hover {
+    --gradient-to-color: var(--primary);
+  }
+
   .lg\:hover\:to-black:hover {
     --gradient-to-color: #000;
   }
@@ -60202,6 +60524,11 @@ video {
 
   .lg\:focus\:from-current:focus {
     --gradient-from-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .lg\:focus\:from-primary:focus {
+    --gradient-from-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -60675,6 +61002,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .lg\:focus\:via-primary:focus {
+    --gradient-via-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .lg\:focus\:via-black:focus {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -61141,6 +61473,10 @@ video {
 
   .lg\:focus\:to-current:focus {
     --gradient-to-color: currentColor;
+  }
+
+  .lg\:focus\:to-primary:focus {
+    --gradient-to-color: var(--primary);
   }
 
   .lg\:focus\:to-black:focus {
@@ -61657,6 +61993,10 @@ video {
 
   .lg\:border-current {
     border-color: currentColor;
+  }
+
+  .lg\:border-primary {
+    border-color: var(--primary);
   }
 
   .lg\:border-black {
@@ -62219,6 +62559,10 @@ video {
     border-color: currentColor;
   }
 
+  .lg\:hover\:border-primary:hover {
+    border-color: var(--primary);
+  }
+
   .lg\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -62777,6 +63121,10 @@ video {
 
   .lg\:focus\:border-current:focus {
     border-color: currentColor;
+  }
+
+  .lg\:focus\:border-primary:focus {
+    border-color: var(--primary);
   }
 
   .lg\:focus\:border-black:focus {
@@ -66563,6 +66911,10 @@ video {
     color: currentColor;
   }
 
+  .lg\:placeholder-primary::placeholder {
+    color: var(--primary);
+  }
+
   .lg\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -67121,6 +67473,10 @@ video {
 
   .lg\:focus\:placeholder-current:focus::placeholder {
     color: currentColor;
+  }
+
+  .lg\:focus\:placeholder-primary:focus::placeholder {
+    color: var(--primary);
   }
 
   .lg\:focus\:placeholder-black:focus::placeholder {
@@ -67997,6 +68353,10 @@ video {
     color: currentColor;
   }
 
+  .lg\:text-primary {
+    color: var(--primary);
+  }
+
   .lg\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -68557,6 +68917,10 @@ video {
     color: currentColor;
   }
 
+  .lg\:hover\:text-primary:hover {
+    color: var(--primary);
+  }
+
   .lg\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -69115,6 +69479,10 @@ video {
 
   .lg\:focus\:text-current:focus {
     color: currentColor;
+  }
+
+  .lg\:focus\:text-primary:focus {
+    color: var(--primary);
   }
 
   .lg\:focus\:text-black:focus {
@@ -73179,6 +73547,10 @@ video {
     border-color: currentColor;
   }
 
+  .xl\:divide-primary > :not(template) ~ :not(template) {
+    border-color: var(--primary);
+  }
+
   .xl\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -73859,6 +74231,10 @@ video {
     background-color: currentColor;
   }
 
+  .xl\:bg-primary {
+    background-color: var(--primary);
+  }
+
   .xl\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -74419,6 +74795,10 @@ video {
     background-color: currentColor;
   }
 
+  .xl\:hover\:bg-primary:hover {
+    background-color: var(--primary);
+  }
+
   .xl\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -74977,6 +75357,10 @@ video {
 
   .xl\:focus\:bg-current:focus {
     background-color: currentColor;
+  }
+
+  .xl\:focus\:bg-primary:focus {
+    background-color: var(--primary);
   }
 
   .xl\:focus\:bg-black:focus {
@@ -75577,6 +75961,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .xl\:from-primary {
+    --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .xl\:from-black {
     --gradient-from-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -76044,6 +76433,11 @@ video {
 
   .xl\:via-current {
     --gradient-via-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:via-primary {
+    --gradient-via-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -76515,6 +76909,10 @@ video {
     --gradient-to-color: currentColor;
   }
 
+  .xl\:to-primary {
+    --gradient-to-color: var(--primary);
+  }
+
   .xl\:to-black {
     --gradient-to-color: #000;
   }
@@ -76890,6 +77288,11 @@ video {
 
   .xl\:hover\:from-current:hover {
     --gradient-from-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:hover\:from-primary:hover {
+    --gradient-from-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -77363,6 +77766,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .xl\:hover\:via-primary:hover {
+    --gradient-via-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .xl\:hover\:via-black:hover {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -77831,6 +78239,10 @@ video {
     --gradient-to-color: currentColor;
   }
 
+  .xl\:hover\:to-primary:hover {
+    --gradient-to-color: var(--primary);
+  }
+
   .xl\:hover\:to-black:hover {
     --gradient-to-color: #000;
   }
@@ -78206,6 +78618,11 @@ video {
 
   .xl\:focus\:from-current:focus {
     --gradient-from-color: currentColor;
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:focus\:from-primary:focus {
+    --gradient-from-color: var(--primary);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -78679,6 +79096,11 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .xl\:focus\:via-primary:focus {
+    --gradient-via-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .xl\:focus\:via-black:focus {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -79145,6 +79567,10 @@ video {
 
   .xl\:focus\:to-current:focus {
     --gradient-to-color: currentColor;
+  }
+
+  .xl\:focus\:to-primary:focus {
+    --gradient-to-color: var(--primary);
   }
 
   .xl\:focus\:to-black:focus {
@@ -79661,6 +80087,10 @@ video {
 
   .xl\:border-current {
     border-color: currentColor;
+  }
+
+  .xl\:border-primary {
+    border-color: var(--primary);
   }
 
   .xl\:border-black {
@@ -80223,6 +80653,10 @@ video {
     border-color: currentColor;
   }
 
+  .xl\:hover\:border-primary:hover {
+    border-color: var(--primary);
+  }
+
   .xl\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -80781,6 +81215,10 @@ video {
 
   .xl\:focus\:border-current:focus {
     border-color: currentColor;
+  }
+
+  .xl\:focus\:border-primary:focus {
+    border-color: var(--primary);
   }
 
   .xl\:focus\:border-black:focus {
@@ -84567,6 +85005,10 @@ video {
     color: currentColor;
   }
 
+  .xl\:placeholder-primary::placeholder {
+    color: var(--primary);
+  }
+
   .xl\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -85125,6 +85567,10 @@ video {
 
   .xl\:focus\:placeholder-current:focus::placeholder {
     color: currentColor;
+  }
+
+  .xl\:focus\:placeholder-primary:focus::placeholder {
+    color: var(--primary);
   }
 
   .xl\:focus\:placeholder-black:focus::placeholder {
@@ -86001,6 +86447,10 @@ video {
     color: currentColor;
   }
 
+  .xl\:text-primary {
+    color: var(--primary);
+  }
+
   .xl\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -86561,6 +87011,10 @@ video {
     color: currentColor;
   }
 
+  .xl\:hover\:text-primary:hover {
+    color: var(--primary);
+  }
+
   .xl\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -87119,6 +87573,10 @@ video {
 
   .xl\:focus\:text-current:focus {
     color: currentColor;
+  }
+
+  .xl\:focus\:text-primary:focus {
+    color: var(--primary);
   }
 
   .xl\:focus\:text-black:focus {

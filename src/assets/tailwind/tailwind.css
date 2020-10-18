@@ -1,3 +1,11 @@
+:root {
+  --primary: #282f44;
+  --background: #ececec;
+  --accent: #e6af2e;
+  --accent-light: #f5d061;
+  box-sizing: border-box;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

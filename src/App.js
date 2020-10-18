@@ -1,35 +1,37 @@
 import React, { useEffect } from 'react';
-import { Layout } from 'antd';
 import { Link, Switch, useHistory, useLocation } from 'react-router-dom';
-import { Login } from './pages/login';
-import { AdminMenu } from './components/badge';
-import { Index } from './pages';
-import { AnimatedRoutes, RouteTransition } from './components/routeTransition';
-import { UserIdex } from './pages/users';
+import { Layout } from 'antd';
 import { AnimatePresence } from 'framer-motion';
-import { me } from './services/api';
+import { AdminMenu } from './components/badge';
+import { AnimatedRoutes, RouteTransition } from './components/routeTransition';
+import { Index } from './pages';
+import { Login } from './pages/login';
+import { UserIdex } from './pages/users';
 import { NewUser } from './pages/users/newUser';
-import { ChangePass } from './pages/changePass';
 import { ViewUser } from './pages/users/viewUser';
 import { EditUser } from './pages/users/editUser';
+import { ChangePass } from './pages/changePass';
+import { ErrorPage } from './pages/error';
+import { useOnlineStatus } from './hooks/useOnlineStatus';
 import {
   releaseAxiosInterceptors,
   setUpAxiosInterceptors,
 } from './services/axios';
-import { ErrorPage } from './pages/error';
+import { me } from './services/api';
 
 const { Header, Content } = Layout;
 
 export const App = () => {
   const location = useLocation();
   const history = useHistory();
+  const [online] = useOnlineStatus();
 
   useEffect(() => {
-    setUpAxiosInterceptors(history);
+    setUpAxiosInterceptors(history, location);
     return () => {
       releaseAxiosInterceptors();
     };
-  }, [history]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     const validate = async () => {
@@ -51,11 +53,55 @@ export const App = () => {
     if (location.pathname !== '/login' && location.pathname !== '/error')
       validate();
   }, [history, location]);
+
+  useEffect(() => {
+    const { state } = location;
+    if (state?.prevLocation) {
+      history.replace({ pathname: state.prevLocation, state: {} });
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    if (online) {
+      //Check if the client is online again
+      if (location.pathname === '/error') {
+        const prevLocation = location.state.prevLocation;
+        if (prevLocation) {
+          //If there is a prevLocation state, then replace to that location
+          switch (prevLocation) {
+            case '/error': {
+              history.replace({
+                pathname: '/',
+                state: {},
+              });
+              break;
+            }
+            default: {
+              history.replace({
+                pathname: prevLocation,
+                state: { prevLocation: location.pathname, conn: true },
+              });
+            }
+          }
+        } else {
+          history.replace({
+            pathname: '/',
+            state: {},
+          });
+        }
+      }
+    } else {
+      // If client goes offline then we redirect to error page
+      history.replace({
+        pathname: '/error',
+        state: { prevLocation: location.pathname, conn: true },
+      });
+    }
+  }, [online]); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
-    <Layout className='layout min-h-screen max-w-full'>
-      <Header
-        style={{ backgroundColor: '#282f44' }}
-        className='sticky top-0 w-full flex flex-row px-3 justify-between'>
+    <Layout className='min-h-screen max-h-screen overflow-hidden max-w-full'>
+      <Header className='sticky top-0 w-full flex flex-row px-3 justify-between bg-primary'>
         <Link to='/'>
           <h1 className='text-white justify-self-start'>Imperium</h1>
         </Link>
@@ -70,7 +116,7 @@ export const App = () => {
           </Switch>
         </AnimatePresence>
       </Header>
-      <Content className='sm:min-h-full md:h-full flex'>
+      <Content className='sm:h-full md:min-h-full overflow-auto flex'>
         <AnimatedRoutes exitBeforeEnter initial={true} location={location}>
           <RouteTransition exact path='/login' slideUp={15}>
             <Login />
@@ -90,11 +136,14 @@ export const App = () => {
           <RouteTransition exact path='/users/:id' slideUp={15}>
             <ViewUser />
           </RouteTransition>
-          <RouteTransition exact path='/error' slide={15}>
+          <RouteTransition exact path='/error' slideUp={15}>
             <ErrorPage />
           </RouteTransition>
-          <RouteTransition path='/' slideUp={15}>
+          <RouteTransition exact path='/' slideUp={15}>
             <Index />
+          </RouteTransition>
+          <RouteTransition path='/' slideUp={15}>
+            <ErrorPage />
           </RouteTransition>
         </AnimatedRoutes>
       </Content>

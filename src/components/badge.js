@@ -22,8 +22,11 @@ const AdminNavMenu = () => {
 export const AdminMenu = () => {
   return (
     <div>
-      <span className='mr-1 text-white'>
+      <span className='mr-1 text-white hidden sm:inline'>
         {localStorage.getItem(constants.EMAIL)}
+      </span>
+      <span className='mr-1 text-white inline sm:hidden'>
+        {localStorage.getItem(constants.EMAIL).split('@')[0]}
       </span>
       <Avatar shape='circle' icon={<UserOutlined />} className='mx-1' />
       <Dropdown

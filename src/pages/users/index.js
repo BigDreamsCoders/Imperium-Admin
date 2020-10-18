@@ -3,9 +3,9 @@ import { Button, Modal, notification, Spin, Table } from 'antd';
 import { usePaginatedQuery } from 'react-query';
 import Icon, { LoadingOutlined } from '@ant-design/icons';
 import { GrAdd } from 'react-icons/gr';
+import { useHistory } from 'react-router-dom';
 import { deleteUser, getUsers } from '../../services/api';
 import { columns } from './tableColumns';
-import { useHistory } from 'react-router-dom';
 
 export const UserIdex = () => {
   const [page, setPage] = useState(0);
@@ -14,12 +14,16 @@ export const UserIdex = () => {
   const [showModal, setShowModal] = useState(false);
   const [showLoadingModal, setShowLoadingModal] = useState(false);
   const history = useHistory();
-  const fetchUsers = useCallback(() => getUsers(page, limit), [page, limit]);
+  const fetchUsers = useCallback(() => {
+    return getUsers(page, limit);
+  }, [page, limit]);
 
   const { resolvedData, isFetching, refetch } = usePaginatedQuery(
     ['fetchUsers', page, limit],
     fetchUsers
   );
+
+  console.log(resolvedData);
 
   const onShowModal = (user) => {
     console.log(user);

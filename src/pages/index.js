@@ -29,7 +29,7 @@ const routes = [
 
 export const Index = () => {
   return (
-    <div className='h-full w-full flex flex-col justify-center items-center'>
+    <div className='min-h-full w-full flex flex-col justify-center items-center'>
       <h1 style={{ fontSize: '48px' }}>Administración</h1>
       <div className='flex justify-evenly flex-wrap w-full'>
         {routes.map((item, index) => (
