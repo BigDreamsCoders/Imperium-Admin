@@ -4,14 +4,14 @@ import { Button, Form } from 'antd';
 import Icon from '@ant-design/icons';
 import { BsCheck, BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
-export const FormWrapper = ({
+export function FormWrapper({
   title,
   form,
   children,
   hasNext,
   hasPrev,
   hasFinish,
-}) => {
+}) {
   const nextBtn = useMemo(() => {
     const data = {};
     if (hasFinish) {
@@ -54,4 +54,4 @@ export const FormWrapper = ({
       )}
     </>
   );
-};
+}

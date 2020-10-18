@@ -6,7 +6,7 @@ import { FormWrapper } from './wrapper';
 
 const { Item } = Form;
 
-export const MedicalInfo = ({ form, prev, finish }) => {
+export function MedicalInfo({ form, prev, finish }) {
   return (
     <FormWrapper
       form={form}
@@ -46,4 +46,4 @@ export const MedicalInfo = ({ form, prev, finish }) => {
       </FormInput>
     </FormWrapper>
   );
-};
+}

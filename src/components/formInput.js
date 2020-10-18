@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const FormInput = (props) => {
+export function FormInput(props) {
   const { children, label, id } = props;
   return (
     <dl>
@@ -10,4 +10,4 @@ export const FormInput = (props) => {
       <dd>{children}</dd>
     </dl>
   );
-};
+}

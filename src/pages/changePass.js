@@ -7,7 +7,7 @@ import { useHistory } from 'react-router-dom';
 
 const { Item } = Form;
 
-export const ChangePass = () => {
+export function ChangePass() {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
@@ -86,4 +86,4 @@ export const ChangePass = () => {
       </div>
     </div>
   );
-};
+}

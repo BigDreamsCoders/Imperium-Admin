@@ -27,7 +27,7 @@ const routes = [
   },
 ];
 
-export const Index = () => {
+export function AdminPanel() {
   return (
     <div className='min-h-full w-full flex flex-col justify-center items-center'>
       <h1 style={{ fontSize: '48px' }}>Administración</h1>
@@ -40,4 +40,4 @@ export const Index = () => {
       </div>
     </div>
   );
-};
+}

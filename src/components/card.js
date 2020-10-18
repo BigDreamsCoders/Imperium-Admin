@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Card = ({ label, icon: Icon }) => {
+export function Card({ label, icon: Icon }) {
   return (
     <div
       className='w-40 h-40 flex justify-center items-center flex-col
@@ -10,4 +10,4 @@ export const Card = ({ label, icon: Icon }) => {
       <h2>{label}</h2>
     </div>
   );
-};
+}

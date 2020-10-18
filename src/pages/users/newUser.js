@@ -14,11 +14,11 @@ const fields = {
   2: ['weight', 'height'],
 };
 
-const getAllFields = () => {
+function getAllFields() {
   return Object.keys(fields).reduce((prev, field) => {
     return [...prev, ...fields[field]];
   }, []);
-};
+}
 
 const components = (form, prev, next, finish) => [
   {
@@ -43,7 +43,7 @@ const components = (form, prev, next, finish) => [
   },
 ];
 
-export const NewUser = () => {
+export function NewUser() {
   const [current, setCurrent] = useState(0);
   const history = useHistory();
   const [form] = Form.useForm();
@@ -107,4 +107,4 @@ export const NewUser = () => {
       </div>
     </div>
   );
-};
+}

@@ -7,7 +7,7 @@ import { login } from '../services/api';
 
 const { Item } = Form;
 
-export const Login = () => {
+export function Login() {
   const [loading, setLoading] = useState();
   const history = useHistory();
 
@@ -90,4 +90,4 @@ export const Login = () => {
       </div>
     </div>
   );
-};
+}

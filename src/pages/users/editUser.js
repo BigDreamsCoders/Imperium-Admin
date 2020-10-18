@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Steps } from 'antd';
 import { useParams } from 'react-router-dom';
 import { gender, getOneUser, roles } from '../../services/api';
-
-const { Step } = Steps;
+import { MSteps } from './components/steps';
 
 const fetchInitialData = (id) => [roles(), gender(), getOneUser(id)];
 
-export const EditUser = () => {
+export function EditUser() {
   // const [user, setUser] = useState({});
   const [current, setCurrent] = useState(0);
   const params = useParams();
@@ -18,14 +16,11 @@ export const EditUser = () => {
       console.log(roles, gender, user);
     })();
   }, [params]);
+
   return (
     <div className='h-full w-full flex flex-col justify-start items-center'>
-      <Steps type='navigation' current={current} onChange={setCurrent}>
-        <Step title='Informacion básica' status='process' />
-        <Step title='Membresía' status='process' />
-        <Step title='Ficha Médica' status='process' />
-      </Steps>
+      <MSteps current={current} onChange={setCurrent} status='process' />
       <div className='relative py-4 w-full h-full flex justify-center items-center'></div>
     </div>
   );
-};
+}

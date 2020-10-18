@@ -6,7 +6,7 @@ import { ReactQueryDevtools } from 'react-query-devtools';
 import './index.less';
 import './assets/tailwind/main.css';
 
-const AppWithRouter = () => {
+function AppWithRouter() {
   return (
     <>
       <Router basename={process.env.PUBLIC_URL}>
@@ -15,6 +15,6 @@ const AppWithRouter = () => {
       {process.env.NODE_ENV !== 'production' && <ReactQueryDevtools />}
     </>
   );
-};
+}
 
 ReactDOM.render(<AppWithRouter />, document.getElementById('root'));

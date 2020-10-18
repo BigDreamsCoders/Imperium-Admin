@@ -15,7 +15,7 @@ const fetchCatalogInfo = async () => {
   return await Promise.all([roles(), gender()]);
 };
 
-export const BasicInfo = ({ form, next }) => {
+export function BasicInfo({ form, next }) {
   const { data, isFetching } = useQuery('basic-info', fetchCatalogInfo);
 
   return (
@@ -71,4 +71,4 @@ export const BasicInfo = ({ form, next }) => {
       </FormInput>
     </FormWrapper>
   );
-};
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import moment from 'moment';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
@@ -6,12 +6,18 @@ import { Button, Spin } from 'antd';
 import { EditOutlined, LoadingOutlined } from '@ant-design/icons';
 import { getOneUser } from '../../services/api';
 
-export const ViewUser = () => {
+export function ViewUser() {
   const params = useParams();
 
-  const { data, isFetching } = useQuery('user', () => {
+  const { data, isFetching, error } = useQuery('user', () => {
     return getOneUser(params.id);
   });
+
+  console.log(data);
+
+  useEffect(() => {
+    console.log(error);
+  }, [error]);
 
   return (
     <>
@@ -103,4 +109,4 @@ export const ViewUser = () => {
       </div>
     </>
   );
-};
+}

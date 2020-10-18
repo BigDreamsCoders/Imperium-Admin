@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-export const ErrorPage = () => {
+export function ErrorPage() {
   const location = useLocation();
 
   if (location?.state) {
@@ -25,12 +25,14 @@ export const ErrorPage = () => {
       <BigText>404</BigText>
     </>
   );
-};
+}
 
-const BigText = ({ children }) => (
-  <div className='h-full w-full flex flex-col justify-center items-center'>
-    <h1 style={{ fontSize: 48 }} className='text-primary'>
-      {children}
-    </h1>
-  </div>
-);
+function BigText({ children }) {
+  return (
+    <div className='h-full w-full flex flex-col justify-center items-center'>
+      <h1 style={{ fontSize: 48 }} className='text-primary'>
+        {children}
+      </h1>
+    </div>
+  );
+}

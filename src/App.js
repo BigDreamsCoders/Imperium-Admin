@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react';
-import { Link, Switch, useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { Layout } from 'antd';
-import { AnimatePresence } from 'framer-motion';
-import { AdminMenu } from './components/badge';
-import { AnimatedRoutes, RouteTransition } from './components/routeTransition';
-import { Index } from './pages';
+import {
+  AnimatedRoutes,
+  RouteTransition,
+  RouteWithoutTransition,
+} from './components/routeTransition';
+import { AdminPanel } from './pages/adminPanel';
 import { Login } from './pages/login';
-import { UserIdex } from './pages/users';
-import { NewUser } from './pages/users/newUser';
-import { ViewUser } from './pages/users/viewUser';
-import { EditUser } from './pages/users/editUser';
+import { UserIndex } from './pages/users';
 import { ChangePass } from './pages/changePass';
 import { ErrorPage } from './pages/error';
 import { useOnlineStatus } from './hooks/useOnlineStatus';
@@ -18,10 +17,11 @@ import {
   setUpAxiosInterceptors,
 } from './services/axios';
 import { me } from './services/api';
+import { MHeader } from './layouts/header';
 
-const { Header, Content } = Layout;
+const { Content } = Layout;
 
-export const App = () => {
+export function App() {
   const location = useLocation();
   const history = useHistory();
   const [online] = useOnlineStatus();
@@ -101,21 +101,7 @@ export const App = () => {
 
   return (
     <Layout className='min-h-screen max-h-screen overflow-hidden max-w-full'>
-      <Header className='sticky top-0 w-full flex flex-row px-3 justify-between bg-primary'>
-        <Link to='/'>
-          <h1 className='text-white justify-self-start'>Imperium</h1>
-        </Link>
-        <AnimatePresence exitBeforeEnter initial={false}>
-          <Switch
-            location={location}
-            key={location.pathname === '/login' ? 'login' : 'admin-menu'}>
-            <RouteTransition exact path='/login' />
-            <RouteTransition exact path='/*' slideUp={15} isMain={false}>
-              <AdminMenu />
-            </RouteTransition>
-          </Switch>
-        </AnimatePresence>
-      </Header>
+      <MHeader location={location} />
       <Content className='sm:h-full md:min-h-full overflow-auto flex'>
         <AnimatedRoutes exitBeforeEnter initial={true} location={location}>
           <RouteTransition exact path='/login' slideUp={15}>
@@ -124,23 +110,14 @@ export const App = () => {
           <RouteTransition exact path='/reset-psw' slideUp={15}>
             <ChangePass />
           </RouteTransition>
-          <RouteTransition exact path='/users' slideUp={15}>
-            <UserIdex />
-          </RouteTransition>
-          <RouteTransition exact path='/users/new' slideUp={15}>
-            <NewUser />
-          </RouteTransition>
-          <RouteTransition exact path='/users/edit/:id' slideUp={15}>
-            <EditUser />
-          </RouteTransition>
-          <RouteTransition exact path='/users/:id' slideUp={15}>
-            <ViewUser />
+          <RouteWithoutTransition path='/users'>
+            <UserIndex />
+          </RouteWithoutTransition>
+          <RouteTransition exact path='/'>
+            <AdminPanel />
           </RouteTransition>
           <RouteTransition exact path='/error' slideUp={15}>
             <ErrorPage />
-          </RouteTransition>
-          <RouteTransition exact path='/' slideUp={15}>
-            <Index />
           </RouteTransition>
           <RouteTransition path='/' slideUp={15}>
             <ErrorPage />
@@ -149,4 +126,4 @@ export const App = () => {
       </Content>
     </Layout>
   );
-};
+}

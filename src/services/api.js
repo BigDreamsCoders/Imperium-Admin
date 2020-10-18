@@ -1,13 +1,13 @@
 import constants from './../utils/constants';
-import axiosInstance from './axios';
+import axiosInstance, { authentication } from './axios';
+import { loginStorage } from './localstorage';
 
 export const login = async ({ email, password }) => {
   const { data } = await axiosInstance.post('auth/admin/login', {
     email,
     password,
   });
-  localStorage.setItem(constants.TOKEN, data.token);
-  localStorage.setItem(constants.EMAIL, data.email);
+  loginStorage(data);
 };
 
 export const getUsers = async (page, limit, source) => {

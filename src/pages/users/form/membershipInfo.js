@@ -13,7 +13,7 @@ const fetchMembershipInfo = async () => {
   return await Promise.all([membershipsType(), membershipsState()]);
 };
 
-export const MembershipInfo = ({ form, next, prev }) => {
+export function MembershipInfo({ form, next, prev }) {
   const { isFetching, data } = useQuery('membership-info', fetchMembershipInfo);
 
   return (
@@ -63,4 +63,4 @@ export const MembershipInfo = ({ form, next, prev }) => {
       </FormInput>
     </FormWrapper>
   );
-};
+}
