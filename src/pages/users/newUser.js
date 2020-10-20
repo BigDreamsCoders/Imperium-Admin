@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Steps, Form, notification } from 'antd';
-import { BasicInfo } from './form/basicInfo';
-import { MembershipInfo } from './form/membershipInfo';
-import { MedicalInfo } from './form/medicalInfo';
-import { createUser } from '../../services/api';
 import { useHistory } from 'react-router-dom';
+import { Steps, Form, notification } from 'antd';
+import { newUserComponents } from './utils/stepsComponents';
+import { createUser } from '../../services/api/user';
 
 const { Step } = Steps;
 
@@ -19,29 +17,6 @@ function getAllFields() {
     return [...prev, ...fields[field]];
   }, []);
 }
-
-const components = (form, prev, next, finish) => [
-  {
-    key: 'Basic Info',
-    component: () => {
-      return <BasicInfo form={form} next={next} />;
-    },
-  },
-  {
-    key: 'Membership',
-    component: () => {
-      return (
-        <MembershipInfo form={form} next={next} prev={prev}></MembershipInfo>
-      );
-    },
-  },
-  {
-    key: 'Medical Record',
-    component: () => {
-      return <MedicalInfo form={form} prev={prev} finish={finish} />;
-    },
-  },
-];
 
 export function NewUser() {
   const [current, setCurrent] = useState(0);
@@ -103,7 +78,7 @@ export function NewUser() {
         <Step title='Ficha Médica' />
       </Steps>
       <div className='relative py-4 w-full h-full flex justify-center items-center'>
-        {components(form, prev, next, onFinish)[current].component()}
+        {newUserComponents(form, prev, next, onFinish)[current].component()}
       </div>
     </div>
   );

@@ -11,16 +11,16 @@ import { ViewUser } from './viewUser';
 export function UserIndex() {
   return (
     <DeAnimatedRoutes>
-      <RouteTransition exact path='/users' slideUp={5}>
+      <RouteTransition exact path='/users'>
         <UserTable />
       </RouteTransition>
-      <RouteTransition exact path='/users/new' slideUp={5}>
+      <RouteTransition exact path='/users/new'>
         <NewUser />
       </RouteTransition>
-      <RouteTransition exact path='/users/edit/:id' slideUp={15}>
+      <RouteTransition exact path='/users/edit/:id'>
         <EditUser />
       </RouteTransition>
-      <RouteTransition exact path='/users/:id' slideUp={15}>
+      <RouteTransition exact path='/users/:id'>
         <ViewUser />
       </RouteTransition>
     </DeAnimatedRoutes>

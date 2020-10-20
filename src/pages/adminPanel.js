@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { TeamOutlined, CarryOutOutlined } from '@ant-design/icons';
 import { BiCloudLightning, BiStore } from 'react-icons/bi';
 import { Card } from '../components/card';
-import { Link } from 'react-router-dom';
 
 const routes = [
   {

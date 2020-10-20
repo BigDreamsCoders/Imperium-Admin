@@ -1,23 +1,23 @@
 import React, { useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Layout } from 'antd';
-import {
-  AnimatedRoutes,
-  RouteTransition,
-  RouteWithoutTransition,
-} from './components/routeTransition';
 import { AdminPanel } from './pages/adminPanel';
 import { Login } from './pages/login';
 import { UserIndex } from './pages/users';
 import { ChangePass } from './pages/changePass';
 import { ErrorPage } from './pages/error';
 import { useOnlineStatus } from './hooks/useOnlineStatus';
+import { me } from './services/api/user';
+import { MHeader } from './layouts/header';
 import {
   releaseAxiosInterceptors,
   setUpAxiosInterceptors,
 } from './services/axios';
-import { me } from './services/api';
-import { MHeader } from './layouts/header';
+import {
+  AnimatedRoutes,
+  RouteTransition,
+  RouteWithoutTransition,
+} from './components/routeTransition';
 
 const { Content } = Layout;
 

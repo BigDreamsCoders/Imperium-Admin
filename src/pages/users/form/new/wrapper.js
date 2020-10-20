@@ -30,7 +30,10 @@ export function FormWrapper({
         <title>{title}</title>
       </Helmet>
       <div className='relative p-10 bg-white rounded shadow-md'>
-        <Form name='login' className='form' form={form}>
+        <Form
+          name='login'
+          className='form flex flex-col sm:flex-row sm:gap-8 sm:w-auto'
+          form={form}>
           {children}
         </Form>
       </div>

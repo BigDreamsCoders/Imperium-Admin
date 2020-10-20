@@ -37,16 +37,4 @@ export const basicInfoItems = [
     ],
     icon: UserOutlined,
   },
-  {
-    id: 'birthday',
-    label: 'Fecha de nacimiento',
-    type: 'date',
-    rules: [
-      {
-        required: true,
-        message: 'Debes ingresar la fecha de nacimiento del usuario',
-      },
-    ],
-    icon: UserOutlined,
-  },
 ];

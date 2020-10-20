@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { usePaginatedQuery } from 'react-query';
-import { GrAdd } from 'react-icons/gr';
-import Icon, { LoadingOutlined } from '@ant-design/icons';
 import { Button, Modal, notification, Spin, Table } from 'antd';
+import Icon, { LoadingOutlined } from '@ant-design/icons';
+import { GrAdd } from 'react-icons/gr';
 import { columns } from './utils/tableColumns';
-import { deleteUser, getUsers } from '../../services/api';
+import { deleteUser, getUsers } from '../../services/api/user';
 
 export function UserTable() {
   const [page, setPage] = useState(0);
