@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button, Form, Input, notification, Select } from 'antd';
-import { FormInput } from '../../../../components/formInput';
-import { basicInfoItems } from '../new/items';
 import moment from 'moment';
 import Icon from '@ant-design/icons';
+import { Button, Form, Input, notification, Select } from 'antd';
+import { FormInput } from 'components/formInput';
+import { basicInfoItems } from '../new/items';
 import { FormWrapper } from './wrapper';
-import { updateUserBasicInfor } from '../../../../services/api/user';
+import { updateUserBasicInfor } from 'services/api/user';
 
 const { Item } = Form;
 const { Option } = Select;

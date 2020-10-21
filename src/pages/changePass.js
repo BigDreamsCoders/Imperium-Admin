@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button, Form, Input, notification } from 'antd';
 import Icon, { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { FormInput } from '../components/formInput';
-import { updatePassword } from '../services/api/user';
+import { FormInput } from 'components/formInput';
+import { updatePassword } from 'services/api/user';
 
 const { Item } = Form;
 

@@ -2,8 +2,8 @@ import React from 'react';
 import { Layout } from 'antd';
 import { Link, Switch } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { RouteTransition } from '../components/routeTransition';
-import { AdminMenu } from '../components/badge';
+import { RouteTransition } from 'components/routeTransition';
+import { AdminMenu } from 'components/badge';
 
 const { Header } = Layout;
 

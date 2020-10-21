@@ -19,6 +19,8 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       primary: 'var(--primary)',
+      accent: 'var(--accent)',
+      'accent-light': 'var(--accent-light)',
       black: '#000',
       white: '#fff',
 

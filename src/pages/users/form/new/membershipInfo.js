@@ -1,12 +1,9 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { Form, Select } from 'antd';
-import { FormInput } from '../../../../components/formInput';
-import {
-  membershipsState,
-  membershipsType,
-} from '../../../../services/api/api';
-import constants from '../../../../utils/constants';
+import { FormInput } from 'components/formInput';
+import { membershipsState, membershipsType } from 'services/api/api';
+import constants from 'utils/constants';
 import { FormWrapper } from './wrapper';
 
 const { Item } = Form;

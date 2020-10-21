@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Tag } from 'antd';
-import constants from '../../../utils/constants';
+import constants from 'utils/constants';
 import { Link } from 'react-router-dom';
 
 export const columns = (deleteCallback) => {

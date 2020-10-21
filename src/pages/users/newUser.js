@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Steps, Form, notification } from 'antd';
 import { newUserComponents } from './utils/stepsComponents';
-import { createUser } from '../../services/api/user';
+import { createUser } from 'services/api/user';
 
 const { Step } = Steps;
 

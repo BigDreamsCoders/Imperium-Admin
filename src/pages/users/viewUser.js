@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { Button, Spin } from 'antd';
 import { EditOutlined, LoadingOutlined } from '@ant-design/icons';
-import { getOneUser } from '../../services/api/user';
+import { getOneUser } from 'services/api/user';
 
 export function ViewUser() {
   const params = useParams();

@@ -1,7 +1,6 @@
 import React from 'react';
 
-export function FormInput(props) {
-  const { children, label, id } = props;
+export function FormInput({ children, label, id }) {
   return (
     <dl>
       <dd className='mb-1'>

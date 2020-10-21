@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import { MSteps } from './components/steps';
 import { editUserComponents } from './utils/stepsComponents';
-import { getOneUser } from '../../services/api/user';
-import { gender, roles } from '../../services/api/api';
+import { getOneUser } from 'services/api/user';
+import { gender, roles } from 'services/api/api';
 
 const fetchInitialData = async (id) => {
   return await Axios.all([roles(), gender(), getOneUser(id)]);

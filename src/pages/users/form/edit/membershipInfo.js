@@ -8,8 +8,8 @@ import {
   membershipsType,
   updateMemebershipState,
   updateMemebershipType,
-} from '../../../../services/api/api';
-import { FormInput } from '../../../../components/formInput';
+} from 'services/api/api';
+import { FormInput } from 'components/formInput';
 
 const { Item } = Form;
 const { Option } = Select;

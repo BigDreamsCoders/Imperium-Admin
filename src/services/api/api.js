@@ -1,12 +1,21 @@
 import axiosInstance from '../axios';
 //import { loginStorage } from '../localstorage';
 
+export const privileges = async () => {
+  const { data } = await axiosInstance.get('role/privileges');
+  return data;
+};
+
 export const roles = async () => {
   const { data } = await axiosInstance.get('role');
   return data.map((role) => ({
     id: role.id,
     name: role.name,
   }));
+};
+
+export const createRole = async (data) => {
+  return await axiosInstance.post('role', data);
 };
 
 export const gender = async () => {

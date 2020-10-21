@@ -5,7 +5,7 @@ import { Button, Modal, notification, Spin, Table } from 'antd';
 import Icon, { LoadingOutlined } from '@ant-design/icons';
 import { GrAdd } from 'react-icons/gr';
 import { columns } from './utils/tableColumns';
-import { deleteUser, getUsers } from '../../services/api/user';
+import { deleteUser, getUsers } from 'services/api/user';
 
 export function UserTable() {
   const [page, setPage] = useState(0);
@@ -23,10 +23,7 @@ export function UserTable() {
     fetchUsers
   );
 
-  console.log(resolvedData);
-
   const onShowModal = (user) => {
-    console.log(user);
     setUserToDelete(user);
     setShowModal(true);
   };
@@ -96,7 +93,7 @@ export function UserTable() {
         size='large'
         icon={<Icon component={GrAdd} />}
         onClick={() => {
-          history.push('/users/new');
+          history.push('/users/admin/new');
         }}
       />
     </div>

@@ -1145,6 +1145,14 @@ video {
   border-color: var(--primary);
 }
 
+.divide-accent > :not(template) ~ :not(template) {
+  border-color: var(--accent);
+}
+
+.divide-accent-light > :not(template) ~ :not(template) {
+  border-color: var(--accent-light);
+}
+
 .divide-black > :not(template) ~ :not(template) {
   --divide-opacity: 1;
   border-color: #000;
@@ -1829,6 +1837,14 @@ video {
   background-color: var(--primary);
 }
 
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-accent-light {
+  background-color: var(--accent-light);
+}
+
 .bg-black {
   --bg-opacity: 1;
   background-color: #000;
@@ -2393,6 +2409,14 @@ video {
   background-color: var(--primary);
 }
 
+.hover\:bg-accent:hover {
+  background-color: var(--accent);
+}
+
+.hover\:bg-accent-light:hover {
+  background-color: var(--accent-light);
+}
+
 .hover\:bg-black:hover {
   --bg-opacity: 1;
   background-color: #000;
@@ -2955,6 +2979,14 @@ video {
 
 .focus\:bg-primary:focus {
   background-color: var(--primary);
+}
+
+.focus\:bg-accent:focus {
+  background-color: var(--accent);
+}
+
+.focus\:bg-accent-light:focus {
+  background-color: var(--accent-light);
 }
 
 .focus\:bg-black:focus {
@@ -3560,6 +3592,16 @@ video {
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
+.from-accent {
+  --gradient-from-color: var(--accent);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.from-accent-light {
+  --gradient-from-color: var(--accent-light);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
 .from-black {
   --gradient-from-color: #000;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -4035,6 +4077,16 @@ video {
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
+.via-accent {
+  --gradient-via-color: var(--accent);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.via-accent-light {
+  --gradient-via-color: var(--accent-light);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
 .via-black {
   --gradient-via-color: #000;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -4507,6 +4559,14 @@ video {
   --gradient-to-color: var(--primary);
 }
 
+.to-accent {
+  --gradient-to-color: var(--accent);
+}
+
+.to-accent-light {
+  --gradient-to-color: var(--accent-light);
+}
+
 .to-black {
   --gradient-to-color: #000;
 }
@@ -4887,6 +4947,16 @@ video {
 
 .hover\:from-primary:hover {
   --gradient-from-color: var(--primary);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.hover\:from-accent:hover {
+  --gradient-from-color: var(--accent);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.hover\:from-accent-light:hover {
+  --gradient-from-color: var(--accent-light);
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
@@ -5365,6 +5435,16 @@ video {
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
+.hover\:via-accent:hover {
+  --gradient-via-color: var(--accent);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.hover\:via-accent-light:hover {
+  --gradient-via-color: var(--accent-light);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
 .hover\:via-black:hover {
   --gradient-via-color: #000;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -5837,6 +5917,14 @@ video {
   --gradient-to-color: var(--primary);
 }
 
+.hover\:to-accent:hover {
+  --gradient-to-color: var(--accent);
+}
+
+.hover\:to-accent-light:hover {
+  --gradient-to-color: var(--accent-light);
+}
+
 .hover\:to-black:hover {
   --gradient-to-color: #000;
 }
@@ -6217,6 +6305,16 @@ video {
 
 .focus\:from-primary:focus {
   --gradient-from-color: var(--primary);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.focus\:from-accent:focus {
+  --gradient-from-color: var(--accent);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.focus\:from-accent-light:focus {
+  --gradient-from-color: var(--accent-light);
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
@@ -6695,6 +6793,16 @@ video {
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
 }
 
+.focus\:via-accent:focus {
+  --gradient-via-color: var(--accent);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
+.focus\:via-accent-light:focus {
+  --gradient-via-color: var(--accent-light);
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+}
+
 .focus\:via-black:focus {
   --gradient-via-color: #000;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -7165,6 +7273,14 @@ video {
 
 .focus\:to-primary:focus {
   --gradient-to-color: var(--primary);
+}
+
+.focus\:to-accent:focus {
+  --gradient-to-color: var(--accent);
+}
+
+.focus\:to-accent-light:focus {
+  --gradient-to-color: var(--accent-light);
 }
 
 .focus\:to-black:focus {
@@ -7685,6 +7801,14 @@ video {
 
 .border-primary {
   border-color: var(--primary);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+.border-accent-light {
+  border-color: var(--accent-light);
 }
 
 .border-black {
@@ -8251,6 +8375,14 @@ video {
   border-color: var(--primary);
 }
 
+.hover\:border-accent:hover {
+  border-color: var(--accent);
+}
+
+.hover\:border-accent-light:hover {
+  border-color: var(--accent-light);
+}
+
 .hover\:border-black:hover {
   --border-opacity: 1;
   border-color: #000;
@@ -8813,6 +8945,14 @@ video {
 
 .focus\:border-primary:focus {
   border-color: var(--primary);
+}
+
+.focus\:border-accent:focus {
+  border-color: var(--accent);
+}
+
+.focus\:border-accent-light:focus {
+  border-color: var(--accent-light);
 }
 
 .focus\:border-black:focus {
@@ -12603,6 +12743,14 @@ video {
   color: var(--primary);
 }
 
+.placeholder-accent::placeholder {
+  color: var(--accent);
+}
+
+.placeholder-accent-light::placeholder {
+  color: var(--accent-light);
+}
+
 .placeholder-black::placeholder {
   --placeholder-opacity: 1;
   color: #000;
@@ -13165,6 +13313,14 @@ video {
 
 .focus\:placeholder-primary:focus::placeholder {
   color: var(--primary);
+}
+
+.focus\:placeholder-accent:focus::placeholder {
+  color: var(--accent);
+}
+
+.focus\:placeholder-accent-light:focus::placeholder {
+  color: var(--accent-light);
 }
 
 .focus\:placeholder-black:focus::placeholder {
@@ -14045,6 +14201,14 @@ video {
   color: var(--primary);
 }
 
+.text-accent {
+  color: var(--accent);
+}
+
+.text-accent-light {
+  color: var(--accent-light);
+}
+
 .text-black {
   --text-opacity: 1;
   color: #000;
@@ -14609,6 +14773,14 @@ video {
   color: var(--primary);
 }
 
+.hover\:text-accent:hover {
+  color: var(--accent);
+}
+
+.hover\:text-accent-light:hover {
+  color: var(--accent-light);
+}
+
 .hover\:text-black:hover {
   --text-opacity: 1;
   color: #000;
@@ -15171,6 +15343,14 @@ video {
 
 .focus\:text-primary:focus {
   color: var(--primary);
+}
+
+.focus\:text-accent:focus {
+  color: var(--accent);
+}
+
+.focus\:text-accent-light:focus {
+  color: var(--accent-light);
 }
 
 .focus\:text-black:focus {
@@ -19269,6 +19449,14 @@ video {
     border-color: var(--primary);
   }
 
+  .sm\:divide-accent > :not(template) ~ :not(template) {
+    border-color: var(--accent);
+  }
+
+  .sm\:divide-accent-light > :not(template) ~ :not(template) {
+    border-color: var(--accent-light);
+  }
+
   .sm\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -19953,6 +20141,14 @@ video {
     background-color: var(--primary);
   }
 
+  .sm\:bg-accent {
+    background-color: var(--accent);
+  }
+
+  .sm\:bg-accent-light {
+    background-color: var(--accent-light);
+  }
+
   .sm\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -20517,6 +20713,14 @@ video {
     background-color: var(--primary);
   }
 
+  .sm\:hover\:bg-accent:hover {
+    background-color: var(--accent);
+  }
+
+  .sm\:hover\:bg-accent-light:hover {
+    background-color: var(--accent-light);
+  }
+
   .sm\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -21079,6 +21283,14 @@ video {
 
   .sm\:focus\:bg-primary:focus {
     background-color: var(--primary);
+  }
+
+  .sm\:focus\:bg-accent:focus {
+    background-color: var(--accent);
+  }
+
+  .sm\:focus\:bg-accent-light:focus {
+    background-color: var(--accent-light);
   }
 
   .sm\:focus\:bg-black:focus {
@@ -21684,6 +21896,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .sm\:from-accent {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .sm\:from-accent-light {
+    --gradient-from-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .sm\:from-black {
     --gradient-from-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -22159,6 +22381,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .sm\:via-accent {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .sm\:via-accent-light {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .sm\:via-black {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -22631,6 +22863,14 @@ video {
     --gradient-to-color: var(--primary);
   }
 
+  .sm\:to-accent {
+    --gradient-to-color: var(--accent);
+  }
+
+  .sm\:to-accent-light {
+    --gradient-to-color: var(--accent-light);
+  }
+
   .sm\:to-black {
     --gradient-to-color: #000;
   }
@@ -23011,6 +23251,16 @@ video {
 
   .sm\:hover\:from-primary:hover {
     --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .sm\:hover\:from-accent:hover {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .sm\:hover\:from-accent-light:hover {
+    --gradient-from-color: var(--accent-light);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -23489,6 +23739,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .sm\:hover\:via-accent:hover {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .sm\:hover\:via-accent-light:hover {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .sm\:hover\:via-black:hover {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -23961,6 +24221,14 @@ video {
     --gradient-to-color: var(--primary);
   }
 
+  .sm\:hover\:to-accent:hover {
+    --gradient-to-color: var(--accent);
+  }
+
+  .sm\:hover\:to-accent-light:hover {
+    --gradient-to-color: var(--accent-light);
+  }
+
   .sm\:hover\:to-black:hover {
     --gradient-to-color: #000;
   }
@@ -24341,6 +24609,16 @@ video {
 
   .sm\:focus\:from-primary:focus {
     --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .sm\:focus\:from-accent:focus {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .sm\:focus\:from-accent-light:focus {
+    --gradient-from-color: var(--accent-light);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -24819,6 +25097,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .sm\:focus\:via-accent:focus {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .sm\:focus\:via-accent-light:focus {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .sm\:focus\:via-black:focus {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -25289,6 +25577,14 @@ video {
 
   .sm\:focus\:to-primary:focus {
     --gradient-to-color: var(--primary);
+  }
+
+  .sm\:focus\:to-accent:focus {
+    --gradient-to-color: var(--accent);
+  }
+
+  .sm\:focus\:to-accent-light:focus {
+    --gradient-to-color: var(--accent-light);
   }
 
   .sm\:focus\:to-black:focus {
@@ -25809,6 +26105,14 @@ video {
 
   .sm\:border-primary {
     border-color: var(--primary);
+  }
+
+  .sm\:border-accent {
+    border-color: var(--accent);
+  }
+
+  .sm\:border-accent-light {
+    border-color: var(--accent-light);
   }
 
   .sm\:border-black {
@@ -26375,6 +26679,14 @@ video {
     border-color: var(--primary);
   }
 
+  .sm\:hover\:border-accent:hover {
+    border-color: var(--accent);
+  }
+
+  .sm\:hover\:border-accent-light:hover {
+    border-color: var(--accent-light);
+  }
+
   .sm\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -26937,6 +27249,14 @@ video {
 
   .sm\:focus\:border-primary:focus {
     border-color: var(--primary);
+  }
+
+  .sm\:focus\:border-accent:focus {
+    border-color: var(--accent);
+  }
+
+  .sm\:focus\:border-accent-light:focus {
+    border-color: var(--accent-light);
   }
 
   .sm\:focus\:border-black:focus {
@@ -30727,6 +31047,14 @@ video {
     color: var(--primary);
   }
 
+  .sm\:placeholder-accent::placeholder {
+    color: var(--accent);
+  }
+
+  .sm\:placeholder-accent-light::placeholder {
+    color: var(--accent-light);
+  }
+
   .sm\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -31289,6 +31617,14 @@ video {
 
   .sm\:focus\:placeholder-primary:focus::placeholder {
     color: var(--primary);
+  }
+
+  .sm\:focus\:placeholder-accent:focus::placeholder {
+    color: var(--accent);
+  }
+
+  .sm\:focus\:placeholder-accent-light:focus::placeholder {
+    color: var(--accent-light);
   }
 
   .sm\:focus\:placeholder-black:focus::placeholder {
@@ -32169,6 +32505,14 @@ video {
     color: var(--primary);
   }
 
+  .sm\:text-accent {
+    color: var(--accent);
+  }
+
+  .sm\:text-accent-light {
+    color: var(--accent-light);
+  }
+
   .sm\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -32733,6 +33077,14 @@ video {
     color: var(--primary);
   }
 
+  .sm\:hover\:text-accent:hover {
+    color: var(--accent);
+  }
+
+  .sm\:hover\:text-accent-light:hover {
+    color: var(--accent-light);
+  }
+
   .sm\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -33295,6 +33647,14 @@ video {
 
   .sm\:focus\:text-primary:focus {
     color: var(--primary);
+  }
+
+  .sm\:focus\:text-accent:focus {
+    color: var(--accent);
+  }
+
+  .sm\:focus\:text-accent-light:focus {
+    color: var(--accent-light);
   }
 
   .sm\:focus\:text-black:focus {
@@ -37363,6 +37723,14 @@ video {
     border-color: var(--primary);
   }
 
+  .md\:divide-accent > :not(template) ~ :not(template) {
+    border-color: var(--accent);
+  }
+
+  .md\:divide-accent-light > :not(template) ~ :not(template) {
+    border-color: var(--accent-light);
+  }
+
   .md\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -38047,6 +38415,14 @@ video {
     background-color: var(--primary);
   }
 
+  .md\:bg-accent {
+    background-color: var(--accent);
+  }
+
+  .md\:bg-accent-light {
+    background-color: var(--accent-light);
+  }
+
   .md\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -38611,6 +38987,14 @@ video {
     background-color: var(--primary);
   }
 
+  .md\:hover\:bg-accent:hover {
+    background-color: var(--accent);
+  }
+
+  .md\:hover\:bg-accent-light:hover {
+    background-color: var(--accent-light);
+  }
+
   .md\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -39173,6 +39557,14 @@ video {
 
   .md\:focus\:bg-primary:focus {
     background-color: var(--primary);
+  }
+
+  .md\:focus\:bg-accent:focus {
+    background-color: var(--accent);
+  }
+
+  .md\:focus\:bg-accent-light:focus {
+    background-color: var(--accent-light);
   }
 
   .md\:focus\:bg-black:focus {
@@ -39778,6 +40170,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .md\:from-accent {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .md\:from-accent-light {
+    --gradient-from-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .md\:from-black {
     --gradient-from-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -40253,6 +40655,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .md\:via-accent {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .md\:via-accent-light {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .md\:via-black {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -40725,6 +41137,14 @@ video {
     --gradient-to-color: var(--primary);
   }
 
+  .md\:to-accent {
+    --gradient-to-color: var(--accent);
+  }
+
+  .md\:to-accent-light {
+    --gradient-to-color: var(--accent-light);
+  }
+
   .md\:to-black {
     --gradient-to-color: #000;
   }
@@ -41105,6 +41525,16 @@ video {
 
   .md\:hover\:from-primary:hover {
     --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .md\:hover\:from-accent:hover {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .md\:hover\:from-accent-light:hover {
+    --gradient-from-color: var(--accent-light);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -41583,6 +42013,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .md\:hover\:via-accent:hover {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .md\:hover\:via-accent-light:hover {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .md\:hover\:via-black:hover {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -42055,6 +42495,14 @@ video {
     --gradient-to-color: var(--primary);
   }
 
+  .md\:hover\:to-accent:hover {
+    --gradient-to-color: var(--accent);
+  }
+
+  .md\:hover\:to-accent-light:hover {
+    --gradient-to-color: var(--accent-light);
+  }
+
   .md\:hover\:to-black:hover {
     --gradient-to-color: #000;
   }
@@ -42435,6 +42883,16 @@ video {
 
   .md\:focus\:from-primary:focus {
     --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .md\:focus\:from-accent:focus {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .md\:focus\:from-accent-light:focus {
+    --gradient-from-color: var(--accent-light);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -42913,6 +43371,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .md\:focus\:via-accent:focus {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .md\:focus\:via-accent-light:focus {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .md\:focus\:via-black:focus {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -43383,6 +43851,14 @@ video {
 
   .md\:focus\:to-primary:focus {
     --gradient-to-color: var(--primary);
+  }
+
+  .md\:focus\:to-accent:focus {
+    --gradient-to-color: var(--accent);
+  }
+
+  .md\:focus\:to-accent-light:focus {
+    --gradient-to-color: var(--accent-light);
   }
 
   .md\:focus\:to-black:focus {
@@ -43903,6 +44379,14 @@ video {
 
   .md\:border-primary {
     border-color: var(--primary);
+  }
+
+  .md\:border-accent {
+    border-color: var(--accent);
+  }
+
+  .md\:border-accent-light {
+    border-color: var(--accent-light);
   }
 
   .md\:border-black {
@@ -44469,6 +44953,14 @@ video {
     border-color: var(--primary);
   }
 
+  .md\:hover\:border-accent:hover {
+    border-color: var(--accent);
+  }
+
+  .md\:hover\:border-accent-light:hover {
+    border-color: var(--accent-light);
+  }
+
   .md\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -45031,6 +45523,14 @@ video {
 
   .md\:focus\:border-primary:focus {
     border-color: var(--primary);
+  }
+
+  .md\:focus\:border-accent:focus {
+    border-color: var(--accent);
+  }
+
+  .md\:focus\:border-accent-light:focus {
+    border-color: var(--accent-light);
   }
 
   .md\:focus\:border-black:focus {
@@ -48821,6 +49321,14 @@ video {
     color: var(--primary);
   }
 
+  .md\:placeholder-accent::placeholder {
+    color: var(--accent);
+  }
+
+  .md\:placeholder-accent-light::placeholder {
+    color: var(--accent-light);
+  }
+
   .md\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -49383,6 +49891,14 @@ video {
 
   .md\:focus\:placeholder-primary:focus::placeholder {
     color: var(--primary);
+  }
+
+  .md\:focus\:placeholder-accent:focus::placeholder {
+    color: var(--accent);
+  }
+
+  .md\:focus\:placeholder-accent-light:focus::placeholder {
+    color: var(--accent-light);
   }
 
   .md\:focus\:placeholder-black:focus::placeholder {
@@ -50263,6 +50779,14 @@ video {
     color: var(--primary);
   }
 
+  .md\:text-accent {
+    color: var(--accent);
+  }
+
+  .md\:text-accent-light {
+    color: var(--accent-light);
+  }
+
   .md\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -50827,6 +51351,14 @@ video {
     color: var(--primary);
   }
 
+  .md\:hover\:text-accent:hover {
+    color: var(--accent);
+  }
+
+  .md\:hover\:text-accent-light:hover {
+    color: var(--accent-light);
+  }
+
   .md\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -51389,6 +51921,14 @@ video {
 
   .md\:focus\:text-primary:focus {
     color: var(--primary);
+  }
+
+  .md\:focus\:text-accent:focus {
+    color: var(--accent);
+  }
+
+  .md\:focus\:text-accent-light:focus {
+    color: var(--accent-light);
   }
 
   .md\:focus\:text-black:focus {
@@ -55457,6 +55997,14 @@ video {
     border-color: var(--primary);
   }
 
+  .lg\:divide-accent > :not(template) ~ :not(template) {
+    border-color: var(--accent);
+  }
+
+  .lg\:divide-accent-light > :not(template) ~ :not(template) {
+    border-color: var(--accent-light);
+  }
+
   .lg\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -56141,6 +56689,14 @@ video {
     background-color: var(--primary);
   }
 
+  .lg\:bg-accent {
+    background-color: var(--accent);
+  }
+
+  .lg\:bg-accent-light {
+    background-color: var(--accent-light);
+  }
+
   .lg\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -56705,6 +57261,14 @@ video {
     background-color: var(--primary);
   }
 
+  .lg\:hover\:bg-accent:hover {
+    background-color: var(--accent);
+  }
+
+  .lg\:hover\:bg-accent-light:hover {
+    background-color: var(--accent-light);
+  }
+
   .lg\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -57267,6 +57831,14 @@ video {
 
   .lg\:focus\:bg-primary:focus {
     background-color: var(--primary);
+  }
+
+  .lg\:focus\:bg-accent:focus {
+    background-color: var(--accent);
+  }
+
+  .lg\:focus\:bg-accent-light:focus {
+    background-color: var(--accent-light);
   }
 
   .lg\:focus\:bg-black:focus {
@@ -57872,6 +58444,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .lg\:from-accent {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .lg\:from-accent-light {
+    --gradient-from-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .lg\:from-black {
     --gradient-from-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -58347,6 +58929,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .lg\:via-accent {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .lg\:via-accent-light {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .lg\:via-black {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -58819,6 +59411,14 @@ video {
     --gradient-to-color: var(--primary);
   }
 
+  .lg\:to-accent {
+    --gradient-to-color: var(--accent);
+  }
+
+  .lg\:to-accent-light {
+    --gradient-to-color: var(--accent-light);
+  }
+
   .lg\:to-black {
     --gradient-to-color: #000;
   }
@@ -59199,6 +59799,16 @@ video {
 
   .lg\:hover\:from-primary:hover {
     --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .lg\:hover\:from-accent:hover {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .lg\:hover\:from-accent-light:hover {
+    --gradient-from-color: var(--accent-light);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -59677,6 +60287,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .lg\:hover\:via-accent:hover {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .lg\:hover\:via-accent-light:hover {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .lg\:hover\:via-black:hover {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -60149,6 +60769,14 @@ video {
     --gradient-to-color: var(--primary);
   }
 
+  .lg\:hover\:to-accent:hover {
+    --gradient-to-color: var(--accent);
+  }
+
+  .lg\:hover\:to-accent-light:hover {
+    --gradient-to-color: var(--accent-light);
+  }
+
   .lg\:hover\:to-black:hover {
     --gradient-to-color: #000;
   }
@@ -60529,6 +61157,16 @@ video {
 
   .lg\:focus\:from-primary:focus {
     --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .lg\:focus\:from-accent:focus {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .lg\:focus\:from-accent-light:focus {
+    --gradient-from-color: var(--accent-light);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -61007,6 +61645,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .lg\:focus\:via-accent:focus {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .lg\:focus\:via-accent-light:focus {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .lg\:focus\:via-black:focus {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -61477,6 +62125,14 @@ video {
 
   .lg\:focus\:to-primary:focus {
     --gradient-to-color: var(--primary);
+  }
+
+  .lg\:focus\:to-accent:focus {
+    --gradient-to-color: var(--accent);
+  }
+
+  .lg\:focus\:to-accent-light:focus {
+    --gradient-to-color: var(--accent-light);
   }
 
   .lg\:focus\:to-black:focus {
@@ -61997,6 +62653,14 @@ video {
 
   .lg\:border-primary {
     border-color: var(--primary);
+  }
+
+  .lg\:border-accent {
+    border-color: var(--accent);
+  }
+
+  .lg\:border-accent-light {
+    border-color: var(--accent-light);
   }
 
   .lg\:border-black {
@@ -62563,6 +63227,14 @@ video {
     border-color: var(--primary);
   }
 
+  .lg\:hover\:border-accent:hover {
+    border-color: var(--accent);
+  }
+
+  .lg\:hover\:border-accent-light:hover {
+    border-color: var(--accent-light);
+  }
+
   .lg\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -63125,6 +63797,14 @@ video {
 
   .lg\:focus\:border-primary:focus {
     border-color: var(--primary);
+  }
+
+  .lg\:focus\:border-accent:focus {
+    border-color: var(--accent);
+  }
+
+  .lg\:focus\:border-accent-light:focus {
+    border-color: var(--accent-light);
   }
 
   .lg\:focus\:border-black:focus {
@@ -66915,6 +67595,14 @@ video {
     color: var(--primary);
   }
 
+  .lg\:placeholder-accent::placeholder {
+    color: var(--accent);
+  }
+
+  .lg\:placeholder-accent-light::placeholder {
+    color: var(--accent-light);
+  }
+
   .lg\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -67477,6 +68165,14 @@ video {
 
   .lg\:focus\:placeholder-primary:focus::placeholder {
     color: var(--primary);
+  }
+
+  .lg\:focus\:placeholder-accent:focus::placeholder {
+    color: var(--accent);
+  }
+
+  .lg\:focus\:placeholder-accent-light:focus::placeholder {
+    color: var(--accent-light);
   }
 
   .lg\:focus\:placeholder-black:focus::placeholder {
@@ -68357,6 +69053,14 @@ video {
     color: var(--primary);
   }
 
+  .lg\:text-accent {
+    color: var(--accent);
+  }
+
+  .lg\:text-accent-light {
+    color: var(--accent-light);
+  }
+
   .lg\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -68921,6 +69625,14 @@ video {
     color: var(--primary);
   }
 
+  .lg\:hover\:text-accent:hover {
+    color: var(--accent);
+  }
+
+  .lg\:hover\:text-accent-light:hover {
+    color: var(--accent-light);
+  }
+
   .lg\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -69483,6 +70195,14 @@ video {
 
   .lg\:focus\:text-primary:focus {
     color: var(--primary);
+  }
+
+  .lg\:focus\:text-accent:focus {
+    color: var(--accent);
+  }
+
+  .lg\:focus\:text-accent-light:focus {
+    color: var(--accent-light);
   }
 
   .lg\:focus\:text-black:focus {
@@ -73551,6 +74271,14 @@ video {
     border-color: var(--primary);
   }
 
+  .xl\:divide-accent > :not(template) ~ :not(template) {
+    border-color: var(--accent);
+  }
+
+  .xl\:divide-accent-light > :not(template) ~ :not(template) {
+    border-color: var(--accent-light);
+  }
+
   .xl\:divide-black > :not(template) ~ :not(template) {
     --divide-opacity: 1;
     border-color: #000;
@@ -74235,6 +74963,14 @@ video {
     background-color: var(--primary);
   }
 
+  .xl\:bg-accent {
+    background-color: var(--accent);
+  }
+
+  .xl\:bg-accent-light {
+    background-color: var(--accent-light);
+  }
+
   .xl\:bg-black {
     --bg-opacity: 1;
     background-color: #000;
@@ -74799,6 +75535,14 @@ video {
     background-color: var(--primary);
   }
 
+  .xl\:hover\:bg-accent:hover {
+    background-color: var(--accent);
+  }
+
+  .xl\:hover\:bg-accent-light:hover {
+    background-color: var(--accent-light);
+  }
+
   .xl\:hover\:bg-black:hover {
     --bg-opacity: 1;
     background-color: #000;
@@ -75361,6 +76105,14 @@ video {
 
   .xl\:focus\:bg-primary:focus {
     background-color: var(--primary);
+  }
+
+  .xl\:focus\:bg-accent:focus {
+    background-color: var(--accent);
+  }
+
+  .xl\:focus\:bg-accent-light:focus {
+    background-color: var(--accent-light);
   }
 
   .xl\:focus\:bg-black:focus {
@@ -75966,6 +76718,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .xl\:from-accent {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:from-accent-light {
+    --gradient-from-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .xl\:from-black {
     --gradient-from-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -76441,6 +77203,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .xl\:via-accent {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:via-accent-light {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .xl\:via-black {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -76913,6 +77685,14 @@ video {
     --gradient-to-color: var(--primary);
   }
 
+  .xl\:to-accent {
+    --gradient-to-color: var(--accent);
+  }
+
+  .xl\:to-accent-light {
+    --gradient-to-color: var(--accent-light);
+  }
+
   .xl\:to-black {
     --gradient-to-color: #000;
   }
@@ -77293,6 +78073,16 @@ video {
 
   .xl\:hover\:from-primary:hover {
     --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:hover\:from-accent:hover {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:hover\:from-accent-light:hover {
+    --gradient-from-color: var(--accent-light);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -77771,6 +78561,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .xl\:hover\:via-accent:hover {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:hover\:via-accent-light:hover {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .xl\:hover\:via-black:hover {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -78243,6 +79043,14 @@ video {
     --gradient-to-color: var(--primary);
   }
 
+  .xl\:hover\:to-accent:hover {
+    --gradient-to-color: var(--accent);
+  }
+
+  .xl\:hover\:to-accent-light:hover {
+    --gradient-to-color: var(--accent-light);
+  }
+
   .xl\:hover\:to-black:hover {
     --gradient-to-color: #000;
   }
@@ -78623,6 +79431,16 @@ video {
 
   .xl\:focus\:from-primary:focus {
     --gradient-from-color: var(--primary);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:focus\:from-accent:focus {
+    --gradient-from-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:focus\:from-accent-light:focus {
+    --gradient-from-color: var(--accent-light);
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
@@ -79101,6 +79919,16 @@ video {
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
   }
 
+  .xl\:focus\:via-accent:focus {
+    --gradient-via-color: var(--accent);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
+  .xl\:focus\:via-accent-light:focus {
+    --gradient-via-color: var(--accent-light);
+    --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(255, 255, 255, 0));
+  }
+
   .xl\:focus\:via-black:focus {
     --gradient-via-color: #000;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-via-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -79571,6 +80399,14 @@ video {
 
   .xl\:focus\:to-primary:focus {
     --gradient-to-color: var(--primary);
+  }
+
+  .xl\:focus\:to-accent:focus {
+    --gradient-to-color: var(--accent);
+  }
+
+  .xl\:focus\:to-accent-light:focus {
+    --gradient-to-color: var(--accent-light);
   }
 
   .xl\:focus\:to-black:focus {
@@ -80091,6 +80927,14 @@ video {
 
   .xl\:border-primary {
     border-color: var(--primary);
+  }
+
+  .xl\:border-accent {
+    border-color: var(--accent);
+  }
+
+  .xl\:border-accent-light {
+    border-color: var(--accent-light);
   }
 
   .xl\:border-black {
@@ -80657,6 +81501,14 @@ video {
     border-color: var(--primary);
   }
 
+  .xl\:hover\:border-accent:hover {
+    border-color: var(--accent);
+  }
+
+  .xl\:hover\:border-accent-light:hover {
+    border-color: var(--accent-light);
+  }
+
   .xl\:hover\:border-black:hover {
     --border-opacity: 1;
     border-color: #000;
@@ -81219,6 +82071,14 @@ video {
 
   .xl\:focus\:border-primary:focus {
     border-color: var(--primary);
+  }
+
+  .xl\:focus\:border-accent:focus {
+    border-color: var(--accent);
+  }
+
+  .xl\:focus\:border-accent-light:focus {
+    border-color: var(--accent-light);
   }
 
   .xl\:focus\:border-black:focus {
@@ -85009,6 +85869,14 @@ video {
     color: var(--primary);
   }
 
+  .xl\:placeholder-accent::placeholder {
+    color: var(--accent);
+  }
+
+  .xl\:placeholder-accent-light::placeholder {
+    color: var(--accent-light);
+  }
+
   .xl\:placeholder-black::placeholder {
     --placeholder-opacity: 1;
     color: #000;
@@ -85571,6 +86439,14 @@ video {
 
   .xl\:focus\:placeholder-primary:focus::placeholder {
     color: var(--primary);
+  }
+
+  .xl\:focus\:placeholder-accent:focus::placeholder {
+    color: var(--accent);
+  }
+
+  .xl\:focus\:placeholder-accent-light:focus::placeholder {
+    color: var(--accent-light);
   }
 
   .xl\:focus\:placeholder-black:focus::placeholder {
@@ -86451,6 +87327,14 @@ video {
     color: var(--primary);
   }
 
+  .xl\:text-accent {
+    color: var(--accent);
+  }
+
+  .xl\:text-accent-light {
+    color: var(--accent-light);
+  }
+
   .xl\:text-black {
     --text-opacity: 1;
     color: #000;
@@ -87015,6 +87899,14 @@ video {
     color: var(--primary);
   }
 
+  .xl\:hover\:text-accent:hover {
+    color: var(--accent);
+  }
+
+  .xl\:hover\:text-accent-light:hover {
+    color: var(--accent-light);
+  }
+
   .xl\:hover\:text-black:hover {
     --text-opacity: 1;
     color: #000;
@@ -87577,6 +88469,14 @@ video {
 
   .xl\:focus\:text-primary:focus {
     color: var(--primary);
+  }
+
+  .xl\:focus\:text-accent:focus {
+    color: var(--accent);
+  }
+
+  .xl\:focus\:text-accent-light:focus {
+    color: var(--accent-light);
   }
 
   .xl\:focus\:text-black:focus {

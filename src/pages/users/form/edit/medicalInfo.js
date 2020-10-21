@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, Form, Input, notification } from 'antd';
-import { FormInput } from '../../../../components/formInput';
+import { FormInput } from 'components/formInput';
 import { FormWrapper } from './wrapper';
-import { updateFile } from '../../../../services/api/user';
+import { updateFile } from 'services/api/user';
 
 const { Item } = Form;
 

@@ -3,11 +3,11 @@ import Axios from 'axios';
 import { useQuery } from 'react-query';
 import Icon from '@ant-design/icons';
 import { Form, Input, Select } from 'antd';
+import { FormInput } from 'components/formInput';
+import { gender, roles } from 'services/api/api';
+import constants from 'utils/constants';
 import { FormWrapper } from './wrapper';
 import { basicInfoItems } from './items';
-import { FormInput } from '../../../../components/formInput';
-import { gender, roles } from '../../../../services/api/api';
-import constants from '../../../../utils/constants';
 
 const { Item } = Form;
 const { Option } = Select;

@@ -3,8 +3,8 @@ import { Avatar, Dropdown, Menu } from 'antd';
 import Icon, { UserOutlined } from '@ant-design/icons';
 import { IoIosArrowDown } from 'react-icons/io';
 import { Link } from 'react-router-dom';
-import constants from '../utils/constants';
-import { logoutStorage } from '../services/localstorage';
+import constants from 'utils/constants';
+import { logoutStorage } from 'services/localstorage';
 
 function AdminNavMenu() {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { MountTransition } from './mountTransition';
+import { MountTransition } from 'components/mountTransition';
 
 export function RouteWithoutTransition({ path, exact, children, ...rest }) {
   return (

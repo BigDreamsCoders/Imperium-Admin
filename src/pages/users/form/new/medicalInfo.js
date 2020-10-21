@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Input } from 'antd';
-import { FormInput } from '../../../../components/formInput';
-import constants from '../../../../utils/constants';
+import { FormInput } from 'components/formInput';
+import constants from 'utils/constants';
 import { FormWrapper } from './wrapper';
 
 const { Item } = Form;
