@@ -11,6 +11,7 @@ export function FormWrapper({
   hasNext,
   hasPrev,
   hasFinish,
+  className,
 }) {
   const nextBtn = useMemo(() => {
     const data = {};
@@ -32,7 +33,11 @@ export function FormWrapper({
       <div className='relative p-10 bg-white rounded shadow-md'>
         <Form
           name='login'
-          className='form flex flex-col sm:flex-row sm:gap-8 sm:w-auto'
+          className={
+            className
+              ? className
+              : 'form flex flex-col sm:flex-row sm:gap-8 sm:w-full'
+          }
           form={form}>
           {children}
         </Form>

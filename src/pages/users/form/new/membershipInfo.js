@@ -21,6 +21,7 @@ export function MembershipInfo({ form, next, prev }) {
       form={form}
       hasNext={next}
       hasPrev={prev}
+      className='form flex flex-col'
       title={`${constants.PAGES.NEW_USER.BASE} \u2022 ${constants.PAGES.NEW_USER.MEMBERSHIP}`}>
       <FormInput id='type' label='Tipo'>
         <Item

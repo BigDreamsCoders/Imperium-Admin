@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import { Button, Form, Input, notification, Spin, Transfer } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-import { createRole, privileges } from 'services/api/api';
+import { privileges, roles, updateRole } from 'services/api/api';
 import { FormInput } from 'components/formInput';
-import { useHistory } from 'react-router-dom';
+import Axios from 'axios';
+import { useHistory, useParams } from 'react-router-dom';
 
 const { Item } = Form;
 
 function trateData(data) {
-  console.log(data);
   return data
     ? data.data.map((item) => ({
         key: item.id,
@@ -19,16 +19,35 @@ function trateData(data) {
     : [];
 }
 
-export function NewRole() {
+const fetchData = async (id) => {
+  return await Axios.all([roles(undefined, undefined, id), privileges()]);
+};
+
+export function EditRole() {
+  const params = useParams();
   const history = useHistory();
   const [targetKeys, setTargetKeys] = useState([]);
-  const { data } = useQuery('new-privileges', privileges);
+  const { data, isFetching } = useQuery('edit-privileges', () =>
+    fetchData(params['id'])
+  );
+
+  useEffect(() => {
+    if (data) {
+      const keys = data[0]?.privilege.map((item) => item.id);
+      setTargetKeys(keys ? keys : []);
+    }
+  }, [data]);
 
   const onFinish = async (value) => {
     console.log(value, targetKeys);
     try {
-      await createRole({ name: value.name, privileges: targetKeys });
-      notification.success({ message: 'El rol se ha creado correctamente' });
+      await updateRole(params['id'], {
+        name: value.name,
+        privileges: targetKeys,
+      });
+      notification.success({
+        message: 'El rol se ha modificado correctamente',
+      });
       history.push('/users/roles/');
     } catch (e) {
       notification.error({ message: 'Ocurrio algo fliplante' });
@@ -41,10 +60,11 @@ export function NewRole() {
 
   return (
     <>
-      {data ? (
+      {!isFetching ? (
         <div className='relative min-h-full w-full flex flex-col justify-center items-center self-stretch'>
           <Form
             onFinish={onFinish}
+            initialValues={data ? { name: data[0]?.name } : {}}
             className='flex justify-around items-center pb-5 gap-5'>
             <FormInput label='Nombre del rol' id='name'>
               <Item
@@ -68,7 +88,7 @@ export function NewRole() {
           <Transfer
             className='flex flex-col sm:flex-row'
             showSearch
-            dataSource={data ? trateData(data) : []}
+            dataSource={data ? trateData(data[1]) : []}
             targetKeys={targetKeys}
             onChange={onChange}
             oneWay={true}

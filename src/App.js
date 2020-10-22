@@ -116,9 +116,9 @@ export function App() {
           <RouteTransition exact path='/'>
             <AdminPanel />
           </RouteTransition>
-          <RouteTransition exact path='/error' slideUp={15}>
+          {/* <RouteTransition exact path='/error' slideUp={15}>
             <ErrorPage />
-          </RouteTransition>
+          </RouteTransition> */}
           <RouteTransition path='/' slideUp={15}>
             <ErrorPage />
           </RouteTransition>

@@ -6,16 +6,29 @@ export const privileges = async () => {
   return data;
 };
 
-export const roles = async () => {
-  const { data } = await axiosInstance.get('role');
-  return data.map((role) => ({
-    id: role.id,
-    name: role.name,
-  }));
+export const roles = async (page, limit, id) => {
+  const conf =
+    page !== undefined && limit ? `?page=${page}&limit=${limit}` : '';
+  const confId = id !== undefined ? `/${id}` : '';
+  const { data } = await axiosInstance.get(`role${confId}${conf}`);
+  if (data.length)
+    return data.map((role) => ({
+      id: role.id,
+      name: role.name,
+      privilege: role.privilege,
+    }));
+  return {
+    name: data.name,
+    privilege: data.privilege,
+  };
 };
 
 export const createRole = async (data) => {
   return await axiosInstance.post('role', data);
+};
+
+export const updateRole = async (id, data) => {
+  return await axiosInstance.put(`role/${id}`, data);
 };
 
 export const gender = async () => {

@@ -32,6 +32,7 @@ export function UserTable() {
     setShowLoadingModal(true);
     try {
       await deleteUser(userToDelete.id);
+      setShowLoadingModal(false);
       refetch();
     } catch (e) {
       notification.error({ message: 'Algo ocurrio' });

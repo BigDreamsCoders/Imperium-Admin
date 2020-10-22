@@ -21,7 +21,7 @@ function AdminNavMenu() {
 
 export function AdminMenu() {
   return (
-    <div>
+    <div className='flex items-center'>
       <span className='mr-1 text-white hidden sm:inline'>
         {localStorage.getItem(constants.EMAIL)}
       </span>

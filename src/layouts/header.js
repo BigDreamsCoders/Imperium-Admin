@@ -11,7 +11,11 @@ export function MHeader({ location }) {
   return (
     <Header className='sticky top-0 w-full flex flex-row px-3 justify-between bg-primary'>
       <Link to='/'>
-        <h1 className='text-white justify-self-start'>Imperium</h1>
+        <img
+          className='justify-self-start h-full'
+          src='/img/logo_darkbg.png'
+          alt='coliseo de color amarillo, junto a el el nombre de Imperium '
+        />
       </Link>
       <AnimatePresence exitBeforeEnter initial={false}>
         <Switch
