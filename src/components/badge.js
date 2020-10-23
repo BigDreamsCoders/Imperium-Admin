@@ -26,7 +26,7 @@ export function AdminMenu() {
         {localStorage.getItem(constants.EMAIL)}
       </span>
       <span className='mr-1 text-white inline sm:hidden'>
-        {localStorage.getItem(constants.EMAIL).split('@')[0]}
+        {localStorage.getItem(constants.EMAIL)?.split('@')[0]}
       </span>
       <Avatar shape='circle' icon={<UserOutlined />} className='mx-1' />
       <Dropdown
